@@ -1,0 +1,85 @@
+{
+  "version": "2026-11-01.2",
+  "policy": "必需条目由清单声明，不从现存文件反推；删除条目不能静默变为完整。",
+  "models": {
+    "M1": {
+      "1.0": {
+        "required_record_ids": [
+          "M1-1.0-mapping-01",
+          "M1-1.0-mapping-02",
+          "M1-1.0-mapping-03",
+          "M1-1.0-mapping-04",
+          "M1-1.0-mapping-05",
+          "M1-1.0-mapping-10",
+          "M1-1.0-data_sources-01",
+          "M1-1.0-continuation-01"
+        ],
+        "catalog_record_ids": [
+          "M1-1.0-catalog-scope",
+          "M1-1.0-catalog-parameters",
+          "M1-1.0-catalog-feasibility"
+        ]
+      }
+    },
+    "M2": {
+      "1.0": {
+        "required_record_ids": [
+          "M2-1.0-mapping-01",
+          "M2-1.0-mapping-02",
+          "M2-1.0-mapping-03",
+          "M2-1.0-mapping-04",
+          "M2-1.0-mapping-05",
+          "M2-1.0-mapping-10",
+          "M2-1.0-data_sources-01",
+          "M2-1.0-continuation-01"
+        ],
+        "catalog_record_ids": [
+          "M2-1.0-catalog-scope",
+          "M2-1.0-catalog-parameters",
+          "M2-1.0-catalog-feasibility"
+        ]
+      }
+    },
+    "M3": {
+      "1.0": {
+        "required_record_ids": [
+          "M3-1.0-mapping-01",
+          "M3-1.0-mapping-02",
+          "M3-1.0-mapping-03",
+          "M3-1.0-mapping-05",
+          "M3-1.0-mapping-09",
+          "M3-1.0-mapping-10",
+          "M3-1.0-data_sources-01",
+          "M3-1.0-continuation-01"
+        ],
+        "catalog_record_ids": [
+          "M3-1.0-catalog-scope",
+          "M3-1.0-catalog-parameters",
+          "M3-1.0-catalog-feasibility"
+        ]
+      }
+    },
+    "M4": {
+      "1.0": {
+        "required_record_ids": [
+          "M4-1.0-mapping-01",
+          "M4-1.0-mapping-02",
+          "M4-1.0-mapping-03",
+          "M4-1.0-mapping-05",
+          "M4-1.0-mapping-06",
+          "M4-1.0-mapping-07",
+          "M4-1.0-mapping-08",
+          "M4-1.0-mapping-09",
+          "M4-1.0-mapping-10",
+          "M4-1.0-data_sources-01",
+          "M4-1.0-continuation-01"
+        ],
+        "catalog_record_ids": [
+          "M4-1.0-catalog-scope",
+          "M4-1.0-catalog-parameters",
+          "M4-1.0-catalog-feasibility"
+        ]
+      }
+    }
+  }
+}

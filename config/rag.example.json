@@ -1,0 +1,6 @@
+{
+  "backend": "model_pack",
+  "embedding_model": null,
+  "index_path": "data/chroma",
+  "top_k": 5
+}

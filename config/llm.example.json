@@ -1,0 +1,12 @@
+{
+  "base_url": "",
+  "model": "",
+  "api_key_env": "LLM_API_KEY",
+  "response_format": "json_schema",
+  "json_schema_supported": false,
+  "allow_no_api_key": false,
+  "timeout_seconds": 120,
+  "max_tokens": 8000,
+  "token_parameter": "max_tokens",
+  "workflow_contract": true
+}

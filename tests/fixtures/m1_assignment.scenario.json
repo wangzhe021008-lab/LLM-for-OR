@@ -1,0 +1,11 @@
+{
+  "model_version": "1.0",
+  "opened_depots": null,
+  "assignment": null,
+  "distance_scale_km": null,
+  "distance_scale_source": null,
+  "scenario_id": "m1_ready",
+  "instance_id": "20-5-1a__Q70",
+  "model_id": "M1",
+  "description": "使用原始实例 20-5-1a，选择开放仓库并将 20 个客户完整分配，按独立直送成本计费；不要求路线排序。"
+}

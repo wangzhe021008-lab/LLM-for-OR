@@ -1,0 +1,7 @@
+{
+  "base_url": "https://api.typesafe.ai",
+  "model": "jev-latest",
+  "api_key_env": "TYPESAFE_API_KEY",
+  "confidence_threshold": 0.7,
+  "timeout_seconds": 30
+}

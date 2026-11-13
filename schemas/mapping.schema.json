@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "固定模型业务映射输出",
+  "type": "object",
+  "properties": {
+    "scenario_id": {
+      "type": "string"
+    },
+    "instance_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model_id": {
+      "type": "string",
+      "enum": [
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ]
+    },
+    "model_version": {
+      "type": "string",
+      "enum": [
+        "1.0"
+      ]
+    },
+    "opened_depots": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "assignment": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "customer_id": {
+            "type": "string"
+          },
+          "depot_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "customer_id",
+          "depot_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "distance_scale_km": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "distance_scale_source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ready",
+        "needs_clarification",
+        "unsupported"
+      ]
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unsupported_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "excerpt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "field",
+          "source",
+          "excerpt"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "requirement_coverage": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "required": [
+    "scenario_id",
+    "instance_id",
+    "model_id",
+    "model_version",
+    "opened_depots",
+    "assignment",
+    "distance_scale_km",
+    "distance_scale_source",
+    "status",
+    "missing_fields",
+    "unsupported_requirements",
+    "evidence"
+  ],
+  "additionalProperties": false
+}

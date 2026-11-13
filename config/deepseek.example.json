@@ -1,0 +1,11 @@
+{
+  "base_url": "https://api.deepseek.com",
+  "model": "deepseek-flash",
+  "api_key_env": "DEEPSEEK_API_KEY",
+  "response_format": "json_object",
+  "allow_no_api_key": false,
+  "timeout_seconds": 120,
+  "max_tokens": 8000,
+  "token_parameter": "max_tokens",
+  "workflow_contract": true
+}

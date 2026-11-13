@@ -1,0 +1,387 @@
+{
+  "version": "1.0",
+  "title": "四类物流业务的固定建模思路",
+  "purpose": "供 JEV 选择模型、LLM 将业务描述匹配为所选模型的参数实例。",
+  "formula_format": "目标函数、约束和派生表达式均为数学公式字符串；由预先实现的固定建模代码构造求解器模型。",
+  "workflow": {
+    "model_selection": "JEV 根据业务描述中要求的决策与约束，以及各模板的 match_when，选择 M1、M2、M3 或 M4。仓库及客户所属仓库已确定，且业务要求满足电池续航约束、采用途中不充电的运营方式时，优先选择 M4；不要求电耗与电池续航约束的常规路径任务选择 M3。不能仅凭输入数据中存在电池参数选择 M4。",
+    "parameter_mapping": "LLM 读取所选模板，提取集合和参数、对应数据字段，输出模型编号及参数实例。",
+    "fixed_model": "变量定义、目标函数、约束和建模假设保持固定；LLM 不自行增删或修改。",
+    "input_validation": "缺少必要参数时列出缺失项；超出模板适用范围时标记不适用；不编造数值。"
+  },
+  "shared_conventions": {
+    "nonnegative_data": "需求 q 严格为正；容量严格为正；距离、各项成本和电耗率非负。",
+    "whole_customer": "每个客户作为完整配送任务，不拆分给多个仓库或多条路线。",
+    "assignment_cost": {
+      "symbol": "g[d,i]",
+      "meaning": "将客户 i 的整单配送任务交给仓库 d 的成本，已经是整单成本，目标函数中不再乘需求 q[i]。",
+      "default_formula": "g[d,i] = h + c[d,i] + c[i,d]",
+      "auxiliary_inputs": {
+        "h": "一次出车的固定成本",
+        "c[u,v]": "从节点 u 到节点 v 的行驶成本",
+        "Q": "车辆载重容量；独立直送口径要求 q[i]≤Q"
+      },
+      "assumption": "第一版按每个客户独立直送并返回计费，不计算多客户合并路线的节约；g 在优化前完成预计算。"
+    },
+    "routing_units": "M3 的 c 为行驶成本；M4 的 ell 为计算能耗的距离。电耗率与 ell 的距离单位一致，B 与耗电量单位一致，各项货币成本口径一致。",
+    "feasible_input": "模板结构正确不代表任意参数均可行。按各模型的 feasibility_checks 验证并保留可行基准方案，才能对通过筛选的实例保证存在可行解。"
+  },
+  "models": [
+    {
+      "model_id": "M1",
+      "name": "容量约束仓库选址",
+      "match_when": "需要从候选仓库中选择开放哪些仓库，并确定各仓库服务的客户；不要求安排车辆访问顺序。",
+      "modeling_idea": "用仓库开放变量和客户分配变量联合决策，在满足客户需求与仓库容量的条件下，最小化开放成本与整单配送成本。",
+      "assumptions": [
+        "仓库为给定候选地点，开放成本和容量已知。",
+        "每个客户由一个已开放仓库承担全部需求。",
+        "配送成本 g 按 shared_conventions.assignment_cost 预计算。"
+      ],
+      "sets": {
+        "D": "候选仓库集合",
+        "C": "客户集合"
+      },
+      "parameters": {
+        "q[i]": "客户 i 的需求量，q[i]>0",
+        "U[d]": "仓库 d 的容量，U[d]>0",
+        "F[d]": "仓库 d 的固定开放成本，F[d]≥0",
+        "g[d,i]": "仓库 d 服务客户 i 的整单配送成本，g[d,i]≥0"
+      },
+      "variables": {
+        "y[d]": {
+          "index": "d∈D",
+          "type": "binary",
+          "meaning": "是否开放仓库 d"
+        },
+        "z[d,i]": {
+          "index": "d∈D, i∈C",
+          "type": "binary",
+          "meaning": "客户 i 是否由仓库 d 服务"
+        }
+      },
+      "derived_expressions": {},
+      "objective": {
+        "sense": "minimize",
+        "expression": "Σ_{d∈D} F[d]*y[d] + Σ_{d∈D} Σ_{i∈C} g[d,i]*z[d,i]",
+        "meaning": "最小化仓库开放成本与整单配送成本之和"
+      },
+      "constraints": [
+        {
+          "id": "unique_assignment",
+          "for_each": "i∈C",
+          "expression": "Σ_{d∈D} z[d,i] = 1",
+          "meaning": "每个客户的全部需求分配给一个仓库"
+        },
+        {
+          "id": "open_before_service",
+          "for_each": "d∈D, i∈C",
+          "expression": "z[d,i] ≤ y[d]",
+          "meaning": "未开放仓库不能服务客户"
+        },
+        {
+          "id": "depot_capacity",
+          "for_each": "d∈D",
+          "expression": "Σ_{i∈C} q[i]*z[d,i] ≤ U[d]*y[d]",
+          "meaning": "分配给仓库的总需求不超过开放后的容量"
+        }
+      ],
+      "feasibility_checks": [
+        "提供一个将所有客户完整分配给候选仓库且不超过各仓容量的基准方案；开放其中使用的仓库即可构成可行解。",
+        "总仓容不少于总需求只是必要条件，不能替代完整分配检查。",
+        "使用独立直送成本时，预处理还需检查每个客户需求不超过车辆容量。"
+      ],
+      "outputs": [
+        "开放仓库清单",
+        "客户所属仓库",
+        "各仓库承担的需求量",
+        "总成本"
+      ]
+    },
+    {
+      "model_id": "M2",
+      "name": "容量约束配送任务分配",
+      "match_when": "仓库已经开放且不再调整，需要决定各仓库分别服务哪些客户；不要求安排车辆访问顺序。",
+      "modeling_idea": "固定仓库开放状态，只优化客户与仓库的对应关系，在仓库容量约束下最小化整单配送成本。",
+      "assumptions": [
+        "D 只包含已开放且允许使用的仓库。",
+        "配送任务分配固定指客户到仓库的分配，每个客户需求不可拆分。",
+        "配送成本 g 按 shared_conventions.assignment_cost 预计算。",
+        "已确定的仓库开放成本为常数，不进入本模型的优化目标。"
+      ],
+      "sets": {
+        "D": "已开放且允许使用的仓库集合",
+        "C": "客户集合"
+      },
+      "parameters": {
+        "q[i]": "客户 i 的需求量，q[i]>0",
+        "U[d]": "仓库 d 的可用容量，U[d]>0",
+        "g[d,i]": "仓库 d 服务客户 i 的整单配送成本，g[d,i]≥0"
+      },
+      "variables": {
+        "z[d,i]": {
+          "index": "d∈D, i∈C",
+          "type": "binary",
+          "meaning": "客户 i 是否由仓库 d 服务"
+        }
+      },
+      "derived_expressions": {},
+      "objective": {
+        "sense": "minimize",
+        "expression": "Σ_{d∈D} Σ_{i∈C} g[d,i]*z[d,i]",
+        "meaning": "最小化已开放仓库承担全部配送任务的成本"
+      },
+      "constraints": [
+        {
+          "id": "unique_assignment",
+          "for_each": "i∈C",
+          "expression": "Σ_{d∈D} z[d,i] = 1",
+          "meaning": "每个客户的全部需求分配给一个仓库"
+        },
+        {
+          "id": "depot_capacity",
+          "for_each": "d∈D",
+          "expression": "Σ_{i∈C} q[i]*z[d,i] ≤ U[d]",
+          "meaning": "各仓库承担的总需求不超过其可用容量"
+        }
+      ],
+      "feasibility_checks": [
+        "提供一个将所有客户完整分配给已开放仓库且不超过各仓容量的基准方案。",
+        "总仓容不少于总需求只是必要条件，不能替代完整分配检查。",
+        "使用独立直送成本时，预处理还需检查每个客户需求不超过车辆容量。"
+      ],
+      "outputs": [
+        "客户所属仓库",
+        "各仓库承担的需求量",
+        "配送成本"
+      ]
+    },
+    {
+      "model_id": "M3",
+      "name": "容量约束常规车辆路径规划",
+      "match_when": "仓库及客户所属仓库已经确定，需要决定路线划分和访问顺序，考虑车辆载重容量，不要求电耗与电池续航约束。",
+      "modeling_idea": "对每个仓库分别构造路线，用路段选择变量决定访问顺序，用货物流变量保证沿途卸货、车辆容量和路线连通性。",
+      "assumptions": [
+        "仓库已开放，客户所属仓库已确定；多个仓库分别求解并汇总。",
+        "同型车辆、纯配送、客户需求为正且不可拆分，每个客户恰好访问一次。",
+        "每条路线从当前仓库出发并返回同一仓库；没有跨仓路线。",
+        "不设紧于客户数量的车辆数量限制，每条路线按一次出车计费。",
+        "第一版不考虑客户时间窗、取货、驾驶时长和跨仓车辆共享。"
+      ],
+      "sets": {
+        "C": "分配给当前仓库的客户集合",
+        "N": "{0}∪C，其中节点 0 为当前仓库",
+        "A": "{(i,j): i∈N, j∈N, i≠j}，允许使用的全部有向路段，不含自环"
+      },
+      "parameters": {
+        "q[i]": "客户 i 的需求量，q[i]>0",
+        "U": "当前仓库的容量，用于验证输入的客户分组，U>0",
+        "Q": "车辆载重容量，Q>0",
+        "h": "每条路线的一次出车固定成本，h≥0",
+        "c[i,j]": "路段 i→j 的行驶成本，c[i,j]≥0"
+      },
+      "variables": {
+        "x[i,j]": {
+          "index": "(i,j)∈A",
+          "type": "binary",
+          "meaning": "是否从节点 i 直接驶向节点 j"
+        },
+        "f[i,j]": {
+          "index": "(i,j)∈A",
+          "type": "continuous_nonnegative",
+          "meaning": "行驶在路段 i→j 上时的载货量"
+        }
+      },
+      "derived_expressions": {
+        "route_count": "Σ_{j∈C} x[0,j]"
+      },
+      "objective": {
+        "sense": "minimize",
+        "expression": "h*Σ_{j∈C} x[0,j] + Σ_{(i,j)∈A} c[i,j]*x[i,j]",
+        "meaning": "最小化出车固定成本与行驶成本"
+      },
+      "constraints": [
+        {
+          "id": "visit_out",
+          "for_each": "i∈C",
+          "expression": "Σ_{j∈N,j≠i} x[i,j] = 1",
+          "meaning": "每个客户恰好离开一次"
+        },
+        {
+          "id": "visit_in",
+          "for_each": "i∈C",
+          "expression": "Σ_{j∈N,j≠i} x[j,i] = 1",
+          "meaning": "每个客户恰好进入一次"
+        },
+        {
+          "id": "depot_balance",
+          "for_each": "当前仓库",
+          "expression": "Σ_{j∈C} x[0,j] = Σ_{i∈C} x[i,0]",
+          "meaning": "从仓库出发与返回仓库的路线数量相等"
+        },
+        {
+          "id": "delivery_flow",
+          "for_each": "i∈C",
+          "expression": "Σ_{j∈N,j≠i} f[j,i] - Σ_{j∈N,j≠i} f[i,j] = q[i]",
+          "meaning": "到达客户后卸下其全部需求；正需求货物流同时排除脱离仓库的客户子回路"
+        },
+        {
+          "id": "vehicle_capacity",
+          "for_each": "(i,j)∈A",
+          "expression": "0 ≤ f[i,j] ≤ Q*x[i,j]",
+          "meaning": "只能在选中路段上载货，且车辆载重不超过容量"
+        },
+        {
+          "id": "empty_return",
+          "for_each": "i∈C",
+          "expression": "f[i,0] = 0",
+          "meaning": "完成配送后空载返回仓库"
+        }
+      ],
+      "feasibility_checks": [
+        "所有客户恰好归属于一个已开放仓库；对当前仓库检查 Σ_{i∈C} q[i]≤U。",
+        "对每个客户检查 0<q[i]≤Q。",
+        "通过检查后，为每个客户建立 0→i→0 的独立路线，构成容量可行的基准方案。"
+      ],
+      "outputs": [
+        "各条车辆路线及访问顺序",
+        "每条路线的配送量",
+        "路线数量",
+        "总成本"
+      ]
+    },
+    {
+      "model_id": "M4",
+      "name": "载重与电池约束电动车路径规划",
+      "match_when": "仓库及客户所属仓库已经确定，需要安排电动车路线，同时考虑载重、电耗与电池续航；采用途中不充电的运营方式。",
+      "modeling_idea": "在容量路径模型中增加随载重变化的路段电耗和累计耗电约束，使每条完整往返路线的耗电不超过电池容量。",
+      "assumptions": [
+        "仓库已开放，客户所属仓库已确定；多个仓库分别求解并汇总。",
+        "同型车辆、纯配送、客户需求为正且不可拆分，每个客户恰好访问一次。",
+        "每条路线从当前仓库出发并返回同一仓库；没有跨仓路线。",
+        "不设紧于客户数量的车辆数量限制，每条路线按一次出车计费。",
+        "第一版不考虑客户时间窗、取货、驾驶时长和跨仓车辆共享。",
+        "电动车每次出发时满电，途中不充电，不安排充电站访问。",
+        "本模板假设单位距离电耗随载重在空载与满载电耗率之间线性变化。",
+        "仅计出车固定成本与用电成本；第一版不加入碳排放、充电排队或电池衰减成本。"
+      ],
+      "sets": {
+        "C": "分配给当前仓库的客户集合",
+        "N": "{0}∪C，其中节点 0 为当前仓库",
+        "A": "{(i,j): i∈N, j∈N, i≠j}，允许使用的全部有向路段，不含自环"
+      },
+      "parameters": {
+        "q[i]": "客户 i 的需求量，q[i]>0",
+        "U": "当前仓库的容量，用于验证输入的客户分组，U>0",
+        "Q": "车辆载重容量，Q>0",
+        "h": "每条路线的一次出车固定成本，h≥0",
+        "ell[i,j]": "路段 i→j 的能耗计算距离，ell[i,j]≥0",
+        "B": "满电出发时可用的电池能量，B>0",
+        "p": "单位电能价格，p≥0",
+        "r0": "空载时单位距离电耗，r0≥0",
+        "r1": "满载时单位距离电耗，r1≥r0"
+      },
+      "variables": {
+        "x[i,j]": {
+          "index": "(i,j)∈A",
+          "type": "binary",
+          "meaning": "是否从节点 i 直接驶向节点 j"
+        },
+        "f[i,j]": {
+          "index": "(i,j)∈A",
+          "type": "continuous_nonnegative",
+          "meaning": "行驶在路段 i→j 上时的载货量"
+        },
+        "e[i]": {
+          "index": "i∈C",
+          "type": "continuous",
+          "meaning": "到达客户 i 时累计耗电的辅助上界，取值范围为 [0,B]"
+        }
+      },
+      "derived_expressions": {
+        "route_count": "Σ_{j∈C} x[0,j]",
+        "E[i,j]": "ell[i,j]*(r0*x[i,j] + (r1-r0)*f[i,j]/Q)，∀(i,j)∈A",
+        "E_meaning": "选中路段的行驶电耗；未选路段因 x=f=0 而耗电为 0。E 为线性派生表达式。"
+      },
+      "objective": {
+        "sense": "minimize",
+        "expression": "h*Σ_{j∈C} x[0,j] + p*Σ_{(i,j)∈A} E[i,j]",
+        "meaning": "最小化出车固定成本与用电成本"
+      },
+      "constraints": [
+        {
+          "id": "visit_out",
+          "for_each": "i∈C",
+          "expression": "Σ_{j∈N,j≠i} x[i,j] = 1",
+          "meaning": "每个客户恰好离开一次"
+        },
+        {
+          "id": "visit_in",
+          "for_each": "i∈C",
+          "expression": "Σ_{j∈N,j≠i} x[j,i] = 1",
+          "meaning": "每个客户恰好进入一次"
+        },
+        {
+          "id": "depot_balance",
+          "for_each": "当前仓库",
+          "expression": "Σ_{j∈C} x[0,j] = Σ_{i∈C} x[i,0]",
+          "meaning": "从仓库出发与返回仓库的路线数量相等"
+        },
+        {
+          "id": "delivery_flow",
+          "for_each": "i∈C",
+          "expression": "Σ_{j∈N,j≠i} f[j,i] - Σ_{j∈N,j≠i} f[i,j] = q[i]",
+          "meaning": "到达客户后卸下其全部需求；正需求货物流同时排除脱离仓库的客户子回路"
+        },
+        {
+          "id": "vehicle_capacity",
+          "for_each": "(i,j)∈A",
+          "expression": "0 ≤ f[i,j] ≤ Q*x[i,j]",
+          "meaning": "只能在选中路段上载货，且车辆载重不超过容量"
+        },
+        {
+          "id": "empty_return",
+          "for_each": "i∈C",
+          "expression": "f[i,0] = 0",
+          "meaning": "完成配送后空载返回仓库"
+        },
+        {
+          "id": "energy_bounds",
+          "for_each": "i∈C",
+          "expression": "0 ≤ e[i] ≤ B",
+          "meaning": "累计耗电辅助量不超过电池容量"
+        },
+        {
+          "id": "departure_energy",
+          "for_each": "j∈C",
+          "expression": "e[j] ≥ E[0,j]",
+          "meaning": "计入从仓库出发到首个客户的耗电"
+        },
+        {
+          "id": "energy_propagation",
+          "for_each": "i,j∈C, i≠j",
+          "expression": "e[j] ≥ e[i] + E[i,j] - B*(1-x[i,j])",
+          "meaning": "选中客户间路段时，沿路线累加耗电；未选路段因 E=0 而解除关联"
+        },
+        {
+          "id": "return_energy",
+          "for_each": "i∈C",
+          "expression": "e[i] + E[i,0] ≤ B",
+          "meaning": "计入回仓耗电，保证完整往返路线的电量可行"
+        }
+      ],
+      "feasibility_checks": [
+        "所有客户恰好归属于一个已开放仓库；对当前仓库检查 Σ_{i∈C} q[i]≤U。",
+        "对每个客户检查 0<q[i]≤Q，并检查 B>0、r1≥r0≥0 和单位一致性。",
+        "为构造保证有解的基准方案，对每个客户检查 ell[0,i]*(r0+(r1-r0)*q[i]/Q) + ell[i,0]*r0 ≤ B。",
+        "全部通过时，每个客户一条 0→i→0 路线即为可行解；单独往返检查是本项目筛选实例的充分条件，未通过时不能直接断言原实例无解。"
+      ],
+      "outputs": [
+        "各条电动车路线及访问顺序",
+        "每条路线的配送量",
+        "每条路线按 E 累加的耗电量",
+        "路线数量",
+        "总成本"
+      ]
+    }
+  ]
+}

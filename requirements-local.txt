@@ -1,0 +1,4 @@
+# Complete local chat and optimization environment using the installed COPT 8.
+-r requirements-live.txt
+-r requirements-solver.txt
+coptpy==8.0.7

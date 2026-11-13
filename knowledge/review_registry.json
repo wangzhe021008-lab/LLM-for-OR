@@ -1,0 +1,298 @@
+{
+  "scope": "Engineering review against fixed model contracts; no external domain-expert signoff claimed.",
+  "reviewed_at": "2026-11-01",
+  "records": {
+    "M1-1.0-catalog-scope": {
+      "status": "engineering_reviewed",
+      "fingerprint": "6180fdcaa617df6b09748f22b6eeaaffc9208719d76814c3f183ac094db47382",
+      "model_id": "M1",
+      "model_version": "1.0"
+    },
+    "M1-1.0-catalog-parameters": {
+      "status": "engineering_reviewed",
+      "fingerprint": "9b3df7829d9b882ad3db95ae73bd3403949d583dbd5ed688a755dc99faff1c2f",
+      "model_id": "M1",
+      "model_version": "1.0"
+    },
+    "M1-1.0-catalog-feasibility": {
+      "status": "engineering_reviewed",
+      "fingerprint": "0c229ee4ddf7fd959355e729edace306a85d56aedc3f4cbb02c20120066dd75f",
+      "model_id": "M1",
+      "model_version": "1.0"
+    },
+    "M2-1.0-catalog-scope": {
+      "status": "engineering_reviewed",
+      "fingerprint": "418d32e6d68d1de4b0411703ac48b4eaa4db1995604390397f9c6dada4f27112",
+      "model_id": "M2",
+      "model_version": "1.0"
+    },
+    "M2-1.0-catalog-parameters": {
+      "status": "engineering_reviewed",
+      "fingerprint": "db2cb93243d3134f8e38e00089ed5ea8681d347e10fa11ff75cbec8a2c72f4e7",
+      "model_id": "M2",
+      "model_version": "1.0"
+    },
+    "M2-1.0-catalog-feasibility": {
+      "status": "engineering_reviewed",
+      "fingerprint": "fe23547055616a2fd5f3c64eb05154e41894c5b3f725a87baa974a5292048484",
+      "model_id": "M2",
+      "model_version": "1.0"
+    },
+    "M3-1.0-catalog-scope": {
+      "status": "engineering_reviewed",
+      "fingerprint": "c3516ce75ecf528af33540572f30952360ef4dc4001f72d3026edb1e643d77f6",
+      "model_id": "M3",
+      "model_version": "1.0"
+    },
+    "M3-1.0-catalog-parameters": {
+      "status": "engineering_reviewed",
+      "fingerprint": "dde2b6b6b732d7e509ae548583a34d8d06793fceafa758080eafe7d0a5cce70b",
+      "model_id": "M3",
+      "model_version": "1.0"
+    },
+    "M3-1.0-catalog-feasibility": {
+      "status": "engineering_reviewed",
+      "fingerprint": "72bd7d8d354007643ca7e2261914b6e4d49041cec062443eb6ad1985f27f5d56",
+      "model_id": "M3",
+      "model_version": "1.0"
+    },
+    "M4-1.0-catalog-scope": {
+      "status": "engineering_reviewed",
+      "fingerprint": "92817c586ab2ac83924988439dfe033fb7d5f0318df2441b45658ae9b8ea1fdb",
+      "model_id": "M4",
+      "model_version": "1.0"
+    },
+    "M4-1.0-catalog-parameters": {
+      "status": "engineering_reviewed",
+      "fingerprint": "1f43188e698d6690e5d264e3908b5244a7f2a7dc8fcb0ce5313f003c6d7f0e1b",
+      "model_id": "M4",
+      "model_version": "1.0"
+    },
+    "M4-1.0-catalog-feasibility": {
+      "status": "engineering_reviewed",
+      "fingerprint": "1061fcae95445a22b2be7c139f7e2a18bb2f75ec0451b1c9e6e067a944f40f01",
+      "model_id": "M4",
+      "model_version": "1.0"
+    },
+    "M1-1.0-mapping-01": {
+      "status": "engineering_reviewed",
+      "fingerprint": "f1ad33f1cdc5d942246203ba2b7f2b5aba02818d4766a76b271bdb818efef4f4",
+      "model_id": "M1",
+      "model_version": "1.0"
+    },
+    "M2-1.0-mapping-01": {
+      "status": "engineering_reviewed",
+      "fingerprint": "9510cd77d8a6e0d0075ff819a8332e6a4d73f311f4a592f812f9ad995f8ce73d",
+      "model_id": "M2",
+      "model_version": "1.0"
+    },
+    "M3-1.0-mapping-01": {
+      "status": "engineering_reviewed",
+      "fingerprint": "87cd5f6c6b39ad1d964338ad2b2062adbe9cd8589c34acc7e224b9d942b11fee",
+      "model_id": "M3",
+      "model_version": "1.0"
+    },
+    "M4-1.0-mapping-01": {
+      "status": "engineering_reviewed",
+      "fingerprint": "a1c21457fab1bb1474e1eb812c9fba43acc5851e42dfdb197ee4159057d6f88b",
+      "model_id": "M4",
+      "model_version": "1.0"
+    },
+    "M1-1.0-mapping-02": {
+      "status": "engineering_reviewed",
+      "fingerprint": "bad5a9e4f5aa7defa3f64824d6aeef806823e261826dd3da656b78d85d54b6d5",
+      "model_id": "M1",
+      "model_version": "1.0"
+    },
+    "M2-1.0-mapping-02": {
+      "status": "engineering_reviewed",
+      "fingerprint": "b1633f528b56071ffa9ac52cca454ce861ed8113b9ee0171d8fb34bfbbab94f5",
+      "model_id": "M2",
+      "model_version": "1.0"
+    },
+    "M3-1.0-mapping-02": {
+      "status": "engineering_reviewed",
+      "fingerprint": "e0323e712e007b19d16f99817a6707f430423a92f1923bd29945a94dc554ff0c",
+      "model_id": "M3",
+      "model_version": "1.0"
+    },
+    "M4-1.0-mapping-02": {
+      "status": "engineering_reviewed",
+      "fingerprint": "94d06a2d18b6600c924fe409c26687ee86140eab8061223a43871dd9a7b0ce17",
+      "model_id": "M4",
+      "model_version": "1.0"
+    },
+    "M1-1.0-mapping-03": {
+      "status": "engineering_reviewed",
+      "fingerprint": "24019ca1e4321e5604dfb5cbd6af4aaa3ff60b4d03cf7250817a7683a733346e",
+      "model_id": "M1",
+      "model_version": "1.0"
+    },
+    "M2-1.0-mapping-03": {
+      "status": "engineering_reviewed",
+      "fingerprint": "75c9723875e61c89ef9499b871f197eacf972abc68a7e0b55b9f7fa227fa294e",
+      "model_id": "M2",
+      "model_version": "1.0"
+    },
+    "M3-1.0-mapping-03": {
+      "status": "engineering_reviewed",
+      "fingerprint": "6f1d0925c8f4b0ac9bb172c5ccae3ee412871c91c4b077ee69e3131030e9c8b5",
+      "model_id": "M3",
+      "model_version": "1.0"
+    },
+    "M4-1.0-mapping-03": {
+      "status": "engineering_reviewed",
+      "fingerprint": "091972ee302f91f99b107d8fbe98b7681386589206f310323d8bc819094669e3",
+      "model_id": "M4",
+      "model_version": "1.0"
+    },
+    "M1-1.0-mapping-04": {
+      "status": "engineering_reviewed",
+      "fingerprint": "0dde388b43663a0e2f3edb27401b379af6bdff258caca3b3943e7d4c950f16e5",
+      "model_id": "M1",
+      "model_version": "1.0"
+    },
+    "M2-1.0-mapping-04": {
+      "status": "engineering_reviewed",
+      "fingerprint": "fe43cfea1310c507b69379e255171ff6c03cb40dc12c29e739f513356ed8667c",
+      "model_id": "M2",
+      "model_version": "1.0"
+    },
+    "M1-1.0-mapping-05": {
+      "status": "engineering_reviewed",
+      "fingerprint": "1f892fe94c55c39c46832a3095a16990c497663d8a74942d9048a75db94154fa",
+      "model_id": "M1",
+      "model_version": "1.0"
+    },
+    "M2-1.0-mapping-05": {
+      "status": "engineering_reviewed",
+      "fingerprint": "33f246dcbec6a19cc86ad2e0161e499e2d66ddd901661961caf8e58e78ba2384",
+      "model_id": "M2",
+      "model_version": "1.0"
+    },
+    "M3-1.0-mapping-05": {
+      "status": "engineering_reviewed",
+      "fingerprint": "e78c0f3e21d038052d8c1e3fce2c079e81693537d65478be0f68862a51fec5f2",
+      "model_id": "M3",
+      "model_version": "1.0"
+    },
+    "M4-1.0-mapping-05": {
+      "status": "engineering_reviewed",
+      "fingerprint": "e1e3224e75d34f8356f3904801172d59ac0d974097f063564ed7437f4230d903",
+      "model_id": "M4",
+      "model_version": "1.0"
+    },
+    "M4-1.0-mapping-06": {
+      "status": "engineering_reviewed",
+      "fingerprint": "11a6c4f0e52cd82fccddfa935dc332de32bd1eaa4e80fb59bbafb02880c8c336",
+      "model_id": "M4",
+      "model_version": "1.0"
+    },
+    "M4-1.0-mapping-07": {
+      "status": "engineering_reviewed",
+      "fingerprint": "111646519f7f5b2fb2dbecd09c3df021fed5cea3b7b9c2dfe669db4da795e06c",
+      "model_id": "M4",
+      "model_version": "1.0"
+    },
+    "M4-1.0-mapping-08": {
+      "status": "engineering_reviewed",
+      "fingerprint": "ee27d0e3e1212bd259b0eb1b38732718a8071b74df723a2eb0f8f7c324d9de87",
+      "model_id": "M4",
+      "model_version": "1.0"
+    },
+    "M3-1.0-mapping-09": {
+      "status": "engineering_reviewed",
+      "fingerprint": "143a3f0ca19f38a32c5aca85773be80bfbfe9e462239e3d4fd8f95027c453c12",
+      "model_id": "M3",
+      "model_version": "1.0"
+    },
+    "M4-1.0-mapping-09": {
+      "status": "engineering_reviewed",
+      "fingerprint": "a60115a2f9516ead8d86b7d78b2f6658e1c6b5d857113aa774bf4a8121480223",
+      "model_id": "M4",
+      "model_version": "1.0"
+    },
+    "M1-1.0-mapping-10": {
+      "status": "engineering_reviewed",
+      "fingerprint": "518468063fe762ecd1c3f5303015604d6b40cdeb17a063b921ec8f5a0a1b8d99",
+      "model_id": "M1",
+      "model_version": "1.0"
+    },
+    "M2-1.0-mapping-10": {
+      "status": "engineering_reviewed",
+      "fingerprint": "0f25345aaf72665ae3a7ca77158ab0eb7bc7e7e33bdff629f74e42c7d56f022a",
+      "model_id": "M2",
+      "model_version": "1.0"
+    },
+    "M3-1.0-mapping-10": {
+      "status": "engineering_reviewed",
+      "fingerprint": "7a399f252dd2c82a5a7be70a766b21485c82e2155d422c135287f60f521f1c93",
+      "model_id": "M3",
+      "model_version": "1.0"
+    },
+    "M4-1.0-mapping-10": {
+      "status": "engineering_reviewed",
+      "fingerprint": "d47148d9078ede29900b70dd353b6788057f6bae19cf5ddc061f03e84e91ce4a",
+      "model_id": "M4",
+      "model_version": "1.0"
+    },
+    "M1-1.0-data_sources-01": {
+      "status": "engineering_reviewed",
+      "fingerprint": "b695fc5d79e831bc0b8b81b1ec94042403ec02931532ac83111b8ce9ac97582e",
+      "model_id": "M1",
+      "model_version": "1.0"
+    },
+    "M1-1.0-continuation-01": {
+      "status": "engineering_reviewed",
+      "fingerprint": "36d9947b420f1702f452f973456a1b411bf1150b5ba5db317f423c7f23659bd1",
+      "model_id": "M1",
+      "model_version": "1.0"
+    },
+    "M2-1.0-data_sources-01": {
+      "status": "engineering_reviewed",
+      "fingerprint": "b51ed10d333d6c8a519f65279db9ef3dae10919b52c8a1e8432689d0cc0b6347",
+      "model_id": "M2",
+      "model_version": "1.0"
+    },
+    "M2-1.0-continuation-01": {
+      "status": "engineering_reviewed",
+      "fingerprint": "f7e7075e5f897e8492c01d85c8080d42df3b6ff540367015a222372adf6b81b9",
+      "model_id": "M2",
+      "model_version": "1.0"
+    },
+    "M3-1.0-data_sources-01": {
+      "status": "engineering_reviewed",
+      "fingerprint": "a7707d50725d97737221c4fa837f44959167f898e423b2c52e99437a869d355e",
+      "model_id": "M3",
+      "model_version": "1.0"
+    },
+    "M3-1.0-continuation-01": {
+      "status": "engineering_reviewed",
+      "fingerprint": "8c3b7ee1ab43e49fc6634dc249173bbd5ee8e26ab245e2d0ec13fc6152513dee",
+      "model_id": "M3",
+      "model_version": "1.0"
+    },
+    "M4-1.0-data_sources-01": {
+      "status": "engineering_reviewed",
+      "fingerprint": "cfb43f622d8a36f3352b73b96685e992fdd0983cd281fa1e5b101e9fba9cf09a",
+      "model_id": "M4",
+      "model_version": "1.0"
+    },
+    "M4-1.0-continuation-01": {
+      "status": "engineering_reviewed",
+      "fingerprint": "552e8cacac8001ae5cb69b06a7cfe38765c7eb7950fcc9b6f2402cd086bb234e",
+      "model_id": "M4",
+      "model_version": "1.0"
+    }
+  },
+  "documents": {
+    "knowledge/runtime_contract.json": {
+      "sha256": "e8c2435b9e26b880fa666d5fc258369fe1332b00b81002c5a50dfb1e5cbbd86c",
+      "status": "engineering_reviewed"
+    },
+    "knowledge/pack_manifest.json": {
+      "sha256": "3cdebfacc0fad5045089e97cc9a5055e588289180f37ef3161a4887e3e5f3c2f",
+      "status": "engineering_reviewed"
+    }
+  }
+}

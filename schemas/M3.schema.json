@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:orllm:M3:1.0",
+  "title": "M3 固定模型参数输入",
+  "type": "object",
+  "properties": {
+    "model_id": {
+      "const": "M3"
+    },
+    "model_version": {
+      "const": "1.0"
+    },
+    "instance_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "C": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "q": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      }
+    },
+    "depot_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "U": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "Q": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "h": {
+      "type": "number",
+      "minimum": 0
+    },
+    "c": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "minProperties": 1,
+        "additionalProperties": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }
+  },
+  "required": [
+    "model_id",
+    "model_version",
+    "instance_id",
+    "C",
+    "q",
+    "depot_id",
+    "U",
+    "Q",
+    "h",
+    "c"
+  ],
+  "additionalProperties": false
+}

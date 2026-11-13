@@ -1,0 +1,32 @@
+{
+  "version": "2026-11-01.2",
+  "scope": "固定模型库的数据读取、会话继承和知识加载约定；不是用户业务要求。",
+  "data_locations": {
+    "instance_catalog": "data/processed/manifest.json：登记 instance_id、源工作表、容量版本及实例文件相对路径。",
+    "raw_workbook": "data/raw/ 下 manifest.workbook 指定的 Excel；manifest.workbook_sha256 记录导入来源指纹。不由聊天模型重新解析或改写。",
+    "prepared_instance": "data/processed/instances/{instance_id}.json：D/C、coordinates、q/U/F、Q/h、route_cost_type、ev、source_sheet、source_cells。",
+    "source_cells": "实例中的 source_cells 指回原表单元格；data/processed/source_sheets/{source_sheet}.json 保存导入时非空单元格快照。",
+    "fixed_models": "models/model_catalog.json、models/{model_id}.py、schemas/{model_id}.schema.json：模型适用边界、数学实现和完整输入接口。",
+    "prior_decisions": "outputs/{reference_result_id}/summary.json 的 business.depots / business.assignments；M3/M4 也可使用经校验的 mapping.json 中的固定输入。引用必须由程序验证。",
+    "binding_snapshot": "outputs/{reference_result_id}/binding_state.json：实例、模型和数据指纹、修订号、参数修改。跨模型继承不得丢失 parameter_values。",
+    "run_audit": "新结果的 planning_context.json、chat_plan.json、selection.json、retrieval.json、mapping_contract.json、mapping_review.json 记录各阶段输入和判断。"
+  },
+  "planning_rules": [
+    "每轮先由程序读取当前引用结果并验证，reference_state 是此次实时检查结论；聊天历史里的说法不能覆盖它。",
+    "reference_state.status=verified 且 reusable_decisions 包含 assignment 时，完整客户归属已在本地验证。assignment_by_depot 给出客户分组；不应再要求用户手抄，不得按最近距离重新分配。",
+    "数据在提示词中没有展开不等于数据缺失。prepared_instance 的真实可用性看 instance_data_availability；继承决策看 reference_state，两者不能混为一谈。",
+    "只有用户明确沿用当前结果、继续当前任务时才绑定前序决策。新实例、新任务、重选仓库或重分配客户不能静默套用旧决策。浏览历史结果不改变当前引用。",
+    "缺信息需说明具体字段及检查来源。reference_state=blocked 时解释实际检查失败原因，不得改成默认数据；数据完备也不意味着任何业务要求都受模型支持。",
+    "用户提出运行且引用可用时，run 的 reuse_decisions 按实际业务选择 opened_depots 或 assignment，正式模型仍交给 JEV 选择。不得因为上一条助手曾错误声称数据缺失而重复拒绝。",
+    "白名单数值更新走 update 分支并保留修订号；当前参数修改结果暂不跨模型继承。修改数据实例或模型结构需重新判断。",
+    "M3 适用载重约束路径；M4 还要求电耗、电池约束和途中不充电。表中出现电池或碳排放字段不代表用户要求启用该模型或该功能。M4 距离换算与来源仍需明确。",
+    "用户明确要求沿用或保留客户归属时，程序建立 inheritance_contract，锁定继承全部归属；聊天模型不能降为只继承仓库。此约束不选择数学模型，也不强迫执行不支持的任务。明确重新分配、否定沿用或自相矛盾时不能套用该锁定。",
+    "电动车字段 B 是电池能量容量，p 是电价，r0/r1 是空载/满载单位距离电耗，不能误说成充电速率或续航。以实时 instance_data_availability 中的定义和缺项为准。新实例和容量版本以本轮原文为准，不能以旧容量反驳新指定版本。"
+  ],
+  "knowledge_loading": {
+    "before_planning": "完整加载本文件及程序生成的数据与引用可用性状态，避免聊天阶段在模型知识加载之前误判缺数据。 明确的执行请求若触发可由本地事实确定的跨实例继承、缺 EV 字段或不支持时间窗预检查，程序直接提供可追溯说明；不要求模型虚构恢复路径。",
+    "after_selection": "按 model_id/model_version 加载 pack_manifest 声明的全部必需知识，核对 review_registry 内容指纹；完整模型和 Schema 直接读取。",
+    "optional_search": "keyword/chroma 只提供所选模型的补充检索，不能替代必需知识包。Top-K 不裁剪必需规则；资料删漏、版本错配或内容未核对时停止。",
+    "source_boundary": "知识解释字段含义、读取位置与适用条件；真实数值来自实例、真实前序决策来自已验证结果。知识不能伪装成用户原文，也不能作为推断未提供业务偏好的依据。"
+  }
+}

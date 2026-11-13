@@ -1,0 +1,441 @@
+{
+  "M2": {
+    "summary": {
+      "complete_solution": true,
+      "cost_breakdown_complete": true,
+      "business": {
+        "depots": [
+          {
+            "model_id": "M2",
+            "depot_id": "d2",
+            "opened": true,
+            "customer_count": 9,
+            "demand": 138,
+            "capacity": 140,
+            "utilization": 0.9857142857142858,
+            "opening_cost": null,
+            "delivery_cost": 25118.0,
+            "vehicle_count": null
+          },
+          {
+            "model_id": "M2",
+            "depot_id": "d3",
+            "opened": true,
+            "customer_count": 5,
+            "demand": 73,
+            "capacity": 140,
+            "utilization": 0.5214285714285715,
+            "opening_cost": null,
+            "delivery_cost": 16446.0,
+            "vehicle_count": null
+          },
+          {
+            "model_id": "M2",
+            "depot_id": "d5",
+            "opened": true,
+            "customer_count": 6,
+            "demand": 104,
+            "capacity": 140,
+            "utilization": 0.7428571428571429,
+            "opening_cost": null,
+            "delivery_cost": 25422.0,
+            "vehicle_count": null
+          }
+        ],
+        "assignments": [
+          {
+            "model_id": "M2",
+            "customer_id": "c1",
+            "depot_id": "d2",
+            "demand": 17,
+            "delivery_cost": 2810
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c2",
+            "depot_id": "d5",
+            "demand": 18,
+            "delivery_cost": 5638
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c3",
+            "depot_id": "d2",
+            "demand": 13,
+            "delivery_cost": 3008
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c4",
+            "depot_id": "d2",
+            "demand": 19,
+            "delivery_cost": 2018
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c5",
+            "depot_id": "d2",
+            "demand": 12,
+            "delivery_cost": 1600
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c6",
+            "depot_id": "d3",
+            "demand": 18,
+            "delivery_cost": 2216
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c7",
+            "depot_id": "d2",
+            "demand": 13,
+            "delivery_cost": 4984
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c8",
+            "depot_id": "d3",
+            "demand": 13,
+            "delivery_cost": 1894
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c9",
+            "depot_id": "d5",
+            "demand": 17,
+            "delivery_cost": 4846
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c10",
+            "depot_id": "d5",
+            "demand": 20,
+            "delivery_cost": 2130
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c11",
+            "depot_id": "d3",
+            "demand": 16,
+            "delivery_cost": 3280
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c12",
+            "depot_id": "d2",
+            "demand": 18,
+            "delivery_cost": 3208
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c13",
+            "depot_id": "d2",
+            "demand": 15,
+            "delivery_cost": 1894
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c14",
+            "depot_id": "d3",
+            "demand": 11,
+            "delivery_cost": 4452
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c15",
+            "depot_id": "d5",
+            "demand": 18,
+            "delivery_cost": 4254
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c16",
+            "depot_id": "d5",
+            "demand": 16,
+            "delivery_cost": 3154
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c17",
+            "depot_id": "d5",
+            "demand": 15,
+            "delivery_cost": 5400
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c18",
+            "depot_id": "d2",
+            "demand": 15,
+            "delivery_cost": 2442
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c19",
+            "depot_id": "d3",
+            "demand": 15,
+            "delivery_cost": 4604
+          },
+          {
+            "model_id": "M2",
+            "customer_id": "c20",
+            "depot_id": "d2",
+            "demand": 16,
+            "delivery_cost": 3154
+          }
+        ]
+      },
+      "models": [
+        {
+          "model_id": "M2",
+          "instance_id": "G20-5-1a__Q70"
+        }
+      ]
+    },
+    "mapping": {
+      "scenario_id": "G20-5-1a__Q70_M2_d2_d3_d5",
+      "instance_id": "G20-5-1a__Q70",
+      "model_id": "M2",
+      "model_version": "1.0",
+      "opened_depots": [
+        "d2",
+        "d3",
+        "d5"
+      ],
+      "assignment": null,
+      "distance_scale_km": null,
+      "distance_scale_source": null,
+      "status": "ready",
+      "missing_fields": [],
+      "unsupported_requirements": [],
+      "evidence": [
+        {
+          "field": "model_id",
+          "source": "models/model_catalog.json#/models/1",
+          "excerpt": "\"name\": \"容量约束配送任务分配\", \"match_when\": \"仓库已经开放且不再调整，需要决定各仓库分别服务哪些客户；不要求安排车辆访问顺序。\""
+        },
+        {
+          "field": "instance_id",
+          "source": "user_description",
+          "excerpt": "使用数据实例 G20-5-1a__Q70。"
+        },
+        {
+          "field": "opened_depots",
+          "source": "user_description",
+          "excerpt": "已经确定开放的仓库：d2、d3、d5。"
+        },
+        {
+          "field": "assignment",
+          "source": "knowledge/field_mapping.md#开放与归属",
+          "excerpt": "M1 同时决定仓库开放和客户分配；M2 只决定客户分配。"
+        }
+      ]
+    }
+  },
+  "M3": {
+    "summary": {
+      "complete_solution": true,
+      "cost_breakdown_complete": true,
+      "business": {
+        "depots": [
+          {
+            "model_id": "M3",
+            "depot_id": "d2",
+            "opened": true,
+            "customer_count": 9,
+            "demand": 138,
+            "capacity": 140,
+            "utilization": 0.9857142857142858,
+            "opening_cost": null,
+            "delivery_cost": null,
+            "vehicle_count": 2
+          },
+          {
+            "model_id": "M3",
+            "depot_id": "d3",
+            "opened": true,
+            "customer_count": 5,
+            "demand": 73,
+            "capacity": 140,
+            "utilization": 0.5214285714285715,
+            "opening_cost": null,
+            "delivery_cost": null,
+            "vehicle_count": 2
+          },
+          {
+            "model_id": "M3",
+            "depot_id": "d5",
+            "opened": true,
+            "customer_count": 6,
+            "demand": 104,
+            "capacity": 140,
+            "utilization": 0.7428571428571429,
+            "opening_cost": null,
+            "delivery_cost": null,
+            "vehicle_count": 2
+          }
+        ],
+        "assignments": []
+      },
+      "models": [
+        {
+          "model_id": "M3",
+          "instance_id": "G20-5-1a__Q70"
+        },
+        {
+          "model_id": "M3",
+          "instance_id": "G20-5-1a__Q70"
+        },
+        {
+          "model_id": "M3",
+          "instance_id": "G20-5-1a__Q70"
+        }
+      ]
+    },
+    "mapping": {
+      "scenario_id": "g20-5-1a-q70-m3",
+      "instance_id": "G20-5-1a__Q70",
+      "model_id": "M3",
+      "model_version": "1.0",
+      "opened_depots": [
+        "d2",
+        "d3",
+        "d5"
+      ],
+      "assignment": [
+        {
+          "customer_id": "c1",
+          "depot_id": "d2"
+        },
+        {
+          "customer_id": "c2",
+          "depot_id": "d5"
+        },
+        {
+          "customer_id": "c3",
+          "depot_id": "d2"
+        },
+        {
+          "customer_id": "c4",
+          "depot_id": "d2"
+        },
+        {
+          "customer_id": "c5",
+          "depot_id": "d2"
+        },
+        {
+          "customer_id": "c6",
+          "depot_id": "d3"
+        },
+        {
+          "customer_id": "c7",
+          "depot_id": "d2"
+        },
+        {
+          "customer_id": "c8",
+          "depot_id": "d3"
+        },
+        {
+          "customer_id": "c9",
+          "depot_id": "d5"
+        },
+        {
+          "customer_id": "c10",
+          "depot_id": "d5"
+        },
+        {
+          "customer_id": "c11",
+          "depot_id": "d3"
+        },
+        {
+          "customer_id": "c12",
+          "depot_id": "d2"
+        },
+        {
+          "customer_id": "c13",
+          "depot_id": "d2"
+        },
+        {
+          "customer_id": "c14",
+          "depot_id": "d3"
+        },
+        {
+          "customer_id": "c15",
+          "depot_id": "d5"
+        },
+        {
+          "customer_id": "c16",
+          "depot_id": "d5"
+        },
+        {
+          "customer_id": "c17",
+          "depot_id": "d5"
+        },
+        {
+          "customer_id": "c18",
+          "depot_id": "d2"
+        },
+        {
+          "customer_id": "c19",
+          "depot_id": "d3"
+        },
+        {
+          "customer_id": "c20",
+          "depot_id": "d2"
+        }
+      ],
+      "distance_scale_km": null,
+      "distance_scale_source": null,
+      "status": "ready",
+      "missing_fields": [],
+      "unsupported_requirements": [],
+      "evidence": [
+        {
+          "field": "model_id",
+          "source": "models/model_catalog.json#/models/2",
+          "excerpt": "容量约束常规车辆路径规划"
+        },
+        {
+          "field": "instance_id",
+          "source": "user_description",
+          "excerpt": "使用数据实例 G20-5-1a__Q70。"
+        },
+        {
+          "field": "opened_depots",
+          "source": "user_description",
+          "excerpt": "已经确定开放的仓库：d2、d3、d5。"
+        },
+        {
+          "field": "assignment",
+          "source": "user_description",
+          "excerpt": "d2 服务的客户：c1、c3、c4、c5、c7、c12、c13、c18、c20。\nd3 服务的客户：c6、c8、c11、c14、c19。\nd5 服务的客户：c2、c9、c10、c15、c16、c17。"
+        },
+        {
+          "field": "single_visit_no_split",
+          "source": "user_description",
+          "excerpt": "每个客户只访问一次且不拆单"
+        },
+        {
+          "field": "vehicle_capacity",
+          "source": "user_description",
+          "excerpt": "满足车辆载重容量"
+        },
+        {
+          "field": "no_time_window",
+          "source": "user_description",
+          "excerpt": "不设置客户时间窗"
+        },
+        {
+          "field": "vehicle_type",
+          "source": "user_description",
+          "excerpt": "采用普通车辆"
+        },
+        {
+          "field": "objective",
+          "source": "user_description",
+          "excerpt": "最小化出车固定成本与行驶成本"
+        }
+      ]
+    }
+  }
+}

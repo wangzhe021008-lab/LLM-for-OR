@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>ORLM · 优化工作台</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="/" aria-label="ORLM 优化工作台首页"><span class="brand-mark">O<span></span></span><div><strong>ORLM</strong><span class="brand-caption">优化工作台</span></div></a>
+    <div class="header-middle"><span class="connection-dot" id="connectionDot"></span><span id="connectionLabel">正在连接本地服务</span></div>
+    <div class="header-actions"><button id="historyButton" class="button button-quiet"><span aria-hidden="true">◷</span> 历史结果</button><button id="newSessionButton" class="button button-quiet"><span aria-hidden="true">＋</span> 新对话</button></div>
+  </header>
+  <main class="app-layout">
+    <section class="chat-panel" aria-label="业务对话">
+      <div class="panel-heading"><div><span class="eyebrow">OPTIMIZATION STUDIO</span><h1>从问题，到方案。</h1></div><span class="local-badge">工作空间</span></div>
+      <div class="conversation" id="conversation" role="log" aria-live="polite" aria-label="对话记录">
+        <div class="welcome" id="welcome"><div class="welcome-icon" aria-hidden="true">↗</div><h2>从你的业务问题开始</h2><p>用自然语言描述目标、数据与约束。系统选择模型，检索知识，生成参数并求解。</p><div class="example-list"><button class="example-button" data-example="location"><span>01</span><div><strong>仓库选址与客户分配</strong><small>选择仓库，让配送总成本更低</small></div><b aria-hidden="true">↗</b></button><button class="example-button" data-example="route"><span>02</span><div><strong>继续规划车辆路线</strong><small>沿用当前结果中的客户归属</small></div><b aria-hidden="true">↗</b></button><button class="example-button" data-example="explain"><span>03</span><div><strong>解释当前方案</strong><small>查看模型、成本与求解状态</small></div><b aria-hidden="true">↗</b></button></div><p class="welcome-foot">右侧可先浏览已保存的求解结果。</p></div>
+      </div>
+      <div class="composer-area">
+        <div class="model-source"><label for="llmSource">模型来源</label><select id="llmSource"><option value="deepseek">DeepSeek API</option><option value="qwen_local">本地 Qwen3.5 9B</option></select><span id="modelSourceHint"></span></div>
+        <div class="context-reference" id="contextReference" hidden><span class="context-icon">↳</span><span id="contextLabel"></span><button id="clearContext" title="取消引用此结果" aria-label="取消引用当前结果">×</button></div>
+        <details class="settings" id="settings"><summary><span>求解设置</span><span id="settingsSummary">300 秒 · gap 8%</span><span class="chevron">⌄</span></summary><div class="settings-body"><label>求解器<select id="solver"><option value="copt">COPT</option></select></label><label>单个子模型时限（秒）<input id="timeLimit" type="number" min="1" max="86400" value="300" step="1"></label><label>目标 gap（%）<input id="mipGap" type="number" min="0" max="99.9" value="8" step="0.1"></label><label class="dataset-label">可用数据（选择后填入描述）<select id="instanceSelect"><option value="">选择实例</option></select></label><p>多仓路径任务分别求解，总耗时可能超过单个子模型时限。</p></div></details>
+        <form class="composer" id="chatForm"><label class="sr-only" for="prompt">描述业务问题</label><textarea id="prompt" rows="3" placeholder="描述你想解决的问题，例如：帮我选择仓库并分配客户，让总成本最小……" maxlength="12000"></textarea><div class="composer-bottom"><span id="composerHint">Enter 发送 · Shift + Enter 换行</span><button type="submit" class="send-button" id="sendButton" aria-label="发送消息"><span>发送</span><span aria-hidden="true">↑</span></button></div></form>
+        <div class="provider-line" id="providerLine">JEV · 模型知识包 · DeepSeek · 数学规划求解器</div>
+      </div>
+    </section>
+    <section class="results-panel" aria-label="优化结果">
+      <div class="result-heading"><div><span class="eyebrow">RESULTS & INSIGHTS <span id="resultOrigin" hidden></span></span><h2 id="resultTitle">方案可视化</h2><p id="resultSubtitle">业务对话生成的方案将在这里展示</p></div><div class="result-actions"><span class="status-badge neutral" id="resultStatus">等待结果</span><button id="reuseResultButton" class="button button-outline" hidden>沿用此结果</button><a id="reportLink" class="button button-quiet" hidden target="_blank" rel="noopener">打开报告 ↗</a></div></div>
+      <div id="browseNotice" class="browse-notice" hidden></div>
+      <div class="result-loading" id="resultLoading" hidden><span class="spinner"></span><span>正在读取结果…</span></div>
+      <details id="runCard" class="card run-card" hidden><summary class="run-card-heading"><div><span class="eyebrow" id="runOrigin">RUNNING PROCESS</span><h3 id="runStage" aria-live="polite">正在准备任务</h3></div><div class="run-elapsed"><span id="runElapsedLabel">已用时间</span><strong id="runElapsed">—</strong></div><span class="chevron" aria-hidden="true">⌄</span></summary><div class="run-card-body"><p id="runHint" class="run-hint"></p><div id="runPhases" class="run-phases"></div><div id="runSubproblems" class="run-subproblems"></div></div></details>
+      <div id="resultEmpty" class="empty-result"><div class="empty-diagram" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><svg viewBox="0 0 230 130"><path d="M45 40 L110 75 L185 30 M110 75 L185 108 M110 75 L35 108"/></svg></div><h3>让方案看得见</h3><p>仓库、客户、路线和模型依据<br>会随每次任务更新。</p><button id="emptyHistoryButton" class="button button-outline">浏览历史结果</button></div>
+      <div id="resultContent" hidden>
+        <div class="metric-grid" id="metrics"></div>
+        <div id="qualitySummary" class="quality-summary"></div>
+        <div id="resultAlerts" class="result-alerts"></div>
+        <nav class="result-tabs" aria-label="结果视图"><button class="tab active" data-tab="overview" aria-selected="true">空间与分配</button><button class="tab" data-tab="details" aria-selected="false">方案明细 <span id="routeCount"></span></button><button class="tab" data-tab="evidence" aria-selected="false">模型与依据</button></nav>
+        <div class="tab-view" id="overviewView">
+          <article class="card chart-card">
+            <div class="card-heading"><div><h3 id="plotTitle">仓库与客户</h3><p id="plotDescription">基准平面坐标</p></div><div class="plot-controls"><select id="depotFilter" aria-label="筛选仓库"><option value="">全部仓库</option></select><button id="labelsToggle" class="icon-button" title="显示客户编号" aria-label="切换客户编号" aria-pressed="false">Aa</button><button id="plotReset" class="icon-button" title="恢复完整视图" aria-label="恢复完整视图">↺</button></div></div>
+            <div id="routePicker" class="route-picker" hidden><label for="routeSelect">查看路线</label><select id="routeSelect" aria-describedby="routePickerHint"><option value="">选择一条路线…</option></select><span id="routePickerHint">选择后显示方向、顺序与详情</span></div>
+            <div class="plot-container" id="plotContainer"><svg id="networkPlot" viewBox="0 0 780 380" role="group" aria-label="仓库、客户及路线图"></svg><div class="plot-tooltip" id="plotTooltip" hidden></div><div class="plot-empty" id="plotEmpty" hidden>此结果暂无可绘制的坐标数据</div></div>
+            <div class="plot-legend" id="plotLegend"></div><section id="routeDetail" class="route-detail" aria-label="选中路线详情" aria-live="polite" hidden></section>
+            <div class="chart-foot"><span>悬停查看节点 · 点击路线查看详情 · 滚轮缩放</span><span>平面坐标示意</span></div>
+          </article>
+          <article class="card depot-card"><div class="card-heading"><div><h3>仓库负载</h3><p>分配需求 / 仓库容量</p></div><span class="subtle" id="depotCount"></span></div><div id="depotLoads" class="depot-loads"></div></article>
+          <details id="subproblemDetails" class="card subproblem-details"><summary>各仓库求解与校验明细<span id="subproblemSummary" class="subtle"></span><span class="chevron">⌄</span></summary><div id="subproblemTable" class="table-scroll"></div><p class="subproblem-foot">可行性由独立校验确认；gap 衡量最优性。单个子问题时限不等于整个任务的总时限。</p></details>
+        </div>
+        <div class="tab-view" id="detailsView" hidden><article class="card"><div class="card-heading"><div><h3 id="detailTitle">方案明细</h3><p id="detailDescription">点击路线可在空间图中定位</p></div></div><div class="table-scroll" id="detailTable"></div></article><div class="cost-note">目标值沿用数据成本单位；不同模型的成本定义不同，不能直接按目标值排名。</div></div>
+        <div class="tab-view" id="evidenceView" hidden><article class="card"><div class="card-heading"><div><h3>模型与运行过程</h3><p>查看方案所用的模型、参数与依据</p></div></div><div class="model-overview" id="modelOverview"></div><div id="resultTimings" class="timing-list"></div></article><details class="card evidence-card"><summary>JEV 模型选择<span class="chevron">⌄</span></summary><div id="selectionEvidence" class="evidence-body"></div></details><details class="card evidence-card"><summary>模型知识与检索依据<span id="knowledgeCount" class="subtle"></span><span class="chevron">⌄</span></summary><div id="ragEvidence" class="evidence-body"></div></details><details class="card evidence-card"><summary>任务参数与输入<span class="chevron">⌄</span></summary><div id="mappingEvidence" class="evidence-body"></div></details><details class="card evidence-card"><summary>方案备注与适用边界<span class="chevron">⌄</span></summary><div id="notesEvidence" class="evidence-body"></div></details><article class="card"><div class="card-heading"><div><h3>结果文件</h3><p>报告、参数与求解记录</p></div></div><div id="fileList" class="file-list"></div><div class="output-path" id="outputPath"></div></article></div>
+      </div>
+    </section>
+  </main>
+  <dialog id="historyDialog"><div class="dialog-heading"><div><span class="eyebrow">SAVED RESULTS</span><h2>历史结果</h2></div><button class="icon-button" id="closeHistory" aria-label="关闭历史结果">×</button></div><div id="historySourceTabs" class="history-source-tabs" role="group" aria-label="结果来源"><button data-source="single" class="active" aria-pressed="true">单次运行 <span></span></button><button data-source="batch_fixed" aria-pressed="false">固定配置批量 <span></span></button><button data-source="batch_live" aria-pressed="false">JEV + DeepSeek 批量 <span></span></button></div><div class="history-filters"><label class="history-search-label"><span class="sr-only">搜索历史结果</span><input id="historySearch" type="search" placeholder="搜索实例或任务名称…"></label><label>模型<select id="historyModel"><option value="">全部模型</option><option>M1</option><option>M2</option><option>M3</option><option>M4</option></select></label><label>起始日期<input id="historyDateFrom" type="date"></label><label>截止日期<input id="historyDateTo" type="date"></label></div><div id="historyCounts" class="history-counts"></div><div id="historyList" class="history-list"></div><div class="dialog-foot">查看只读取本地文件，不会调用 API、求解或改变下一轮引用。需要继续规划时，请点击右侧“沿用此结果”。</div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

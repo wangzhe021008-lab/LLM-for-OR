@@ -1,0 +1,11 @@
+{
+  "model_version": "1.0",
+  "opened_depots": null,
+  "assignment": null,
+  "distance_scale_km": null,
+  "distance_scale_source": null,
+  "scenario_id": "m4_missing",
+  "instance_id": "G20-5-1a__Q70",
+  "model_id": "M4",
+  "description": "演示缺失信息处理：电动车途中不充电，尚未提供已开放仓库、客户所属仓库与距离单位换算依据。"
+}
