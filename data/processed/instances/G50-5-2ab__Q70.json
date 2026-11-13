@@ -1,0 +1,746 @@
+{
+  "format_version": "1.0",
+  "instance_id": "G50-5-2ab__Q70",
+  "source_sheet": "G50-5-2ab",
+  "D": [
+    "d1",
+    "d2",
+    "d3",
+    "d4",
+    "d5"
+  ],
+  "C": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6",
+    "c7",
+    "c8",
+    "c9",
+    "c10",
+    "c11",
+    "c12",
+    "c13",
+    "c14",
+    "c15",
+    "c16",
+    "c17",
+    "c18",
+    "c19",
+    "c20",
+    "c21",
+    "c22",
+    "c23",
+    "c24",
+    "c25",
+    "c26",
+    "c27",
+    "c28",
+    "c29",
+    "c30",
+    "c31",
+    "c32",
+    "c33",
+    "c34",
+    "c35",
+    "c36",
+    "c37",
+    "c38",
+    "c39",
+    "c40",
+    "c41",
+    "c42",
+    "c43",
+    "c44",
+    "c45",
+    "c46",
+    "c47",
+    "c48",
+    "c49",
+    "c50"
+  ],
+  "coordinates": {
+    "d1": {
+      "x": 42,
+      "y": 4
+    },
+    "d2": {
+      "x": 47,
+      "y": 20
+    },
+    "d3": {
+      "x": 47,
+      "y": 49
+    },
+    "d4": {
+      "x": 7,
+      "y": 18
+    },
+    "d5": {
+      "x": 19,
+      "y": 18
+    },
+    "c1": {
+      "x": 14,
+      "y": 14
+    },
+    "c2": {
+      "x": 20,
+      "y": 18
+    },
+    "c3": {
+      "x": 26,
+      "y": 1
+    },
+    "c4": {
+      "x": 17,
+      "y": 4
+    },
+    "c5": {
+      "x": 13,
+      "y": 3
+    },
+    "c6": {
+      "x": 12,
+      "y": 4
+    },
+    "c7": {
+      "x": 4,
+      "y": 10
+    },
+    "c8": {
+      "x": 21,
+      "y": 21
+    },
+    "c9": {
+      "x": 1,
+      "y": 19
+    },
+    "c10": {
+      "x": 2,
+      "y": 22
+    },
+    "c11": {
+      "x": 6,
+      "y": 5
+    },
+    "c12": {
+      "x": 7,
+      "y": 11
+    },
+    "c13": {
+      "x": 6,
+      "y": 12
+    },
+    "c14": {
+      "x": 11,
+      "y": 25
+    },
+    "c15": {
+      "x": 18,
+      "y": 16
+    },
+    "c16": {
+      "x": 14,
+      "y": 19
+    },
+    "c17": {
+      "x": 17,
+      "y": 22
+    },
+    "c18": {
+      "x": 16,
+      "y": 11
+    },
+    "c19": {
+      "x": 11,
+      "y": 20
+    },
+    "c20": {
+      "x": 13,
+      "y": 24
+    },
+    "c21": {
+      "x": 12,
+      "y": 1
+    },
+    "c22": {
+      "x": 10,
+      "y": 7
+    },
+    "c23": {
+      "x": 12,
+      "y": 5
+    },
+    "c24": {
+      "x": 8,
+      "y": 20
+    },
+    "c25": {
+      "x": 4,
+      "y": 4
+    },
+    "c26": {
+      "x": 45,
+      "y": 25
+    },
+    "c27": {
+      "x": 46,
+      "y": 25
+    },
+    "c28": {
+      "x": 27,
+      "y": 45
+    },
+    "c29": {
+      "x": 49,
+      "y": 35
+    },
+    "c30": {
+      "x": 39,
+      "y": 48
+    },
+    "c31": {
+      "x": 34,
+      "y": 45
+    },
+    "c32": {
+      "x": 30,
+      "y": 47
+    },
+    "c33": {
+      "x": 46,
+      "y": 45
+    },
+    "c34": {
+      "x": 29,
+      "y": 29
+    },
+    "c35": {
+      "x": 50,
+      "y": 26
+    },
+    "c36": {
+      "x": 49,
+      "y": 29
+    },
+    "c37": {
+      "x": 25,
+      "y": 40
+    },
+    "c38": {
+      "x": 40,
+      "y": 44
+    },
+    "c39": {
+      "x": 39,
+      "y": 30
+    },
+    "c40": {
+      "x": 27,
+      "y": 33
+    },
+    "c41": {
+      "x": 37,
+      "y": 26
+    },
+    "c42": {
+      "x": 35,
+      "y": 48
+    },
+    "c43": {
+      "x": 42,
+      "y": 35
+    },
+    "c44": {
+      "x": 25,
+      "y": 40
+    },
+    "c45": {
+      "x": 39,
+      "y": 41
+    },
+    "c46": {
+      "x": 48,
+      "y": 41
+    },
+    "c47": {
+      "x": 41,
+      "y": 26
+    },
+    "c48": {
+      "x": 35,
+      "y": 27
+    },
+    "c49": {
+      "x": 41,
+      "y": 31
+    },
+    "c50": {
+      "x": 37,
+      "y": 31
+    }
+  },
+  "q": {
+    "c1": 14,
+    "c2": 19,
+    "c3": 18,
+    "c4": 17,
+    "c5": 13,
+    "c6": 17,
+    "c7": 16,
+    "c8": 16,
+    "c9": 12,
+    "c10": 18,
+    "c11": 14,
+    "c12": 18,
+    "c13": 16,
+    "c14": 16,
+    "c15": 15,
+    "c16": 15,
+    "c17": 19,
+    "c18": 15,
+    "c19": 16,
+    "c20": 15,
+    "c21": 16,
+    "c22": 11,
+    "c23": 11,
+    "c24": 17,
+    "c25": 16,
+    "c26": 20,
+    "c27": 17,
+    "c28": 18,
+    "c29": 20,
+    "c30": 11,
+    "c31": 19,
+    "c32": 20,
+    "c33": 13,
+    "c34": 13,
+    "c35": 11,
+    "c36": 17,
+    "c37": 17,
+    "c38": 13,
+    "c39": 16,
+    "c40": 13,
+    "c41": 13,
+    "c42": 18,
+    "c43": 14,
+    "c44": 18,
+    "c45": 16,
+    "c46": 12,
+    "c47": 12,
+    "c48": 14,
+    "c49": 14,
+    "c50": 16
+  },
+  "U": {
+    "d1": 350,
+    "d2": 350,
+    "d3": 350,
+    "d4": 350,
+    "d5": 350
+  },
+  "F": {
+    "d1": 12318,
+    "d2": 11308,
+    "d3": 8938,
+    "d4": 14703,
+    "d5": 9073
+  },
+  "Q": 70,
+  "h": 1000,
+  "route_cost_type": 0,
+  "ev": {
+    "B": 42.02,
+    "p": 0.72,
+    "r0": 0.32456,
+    "r1": 0.421928
+  },
+  "extra_parameters": {
+    "depot_carbon": {
+      "d1": 35,
+      "d2": 35,
+      "d3": 35,
+      "d4": 35,
+      "d5": 35
+    },
+    "carbon_price": 0.354,
+    "emission_coefficient": 2.63,
+    "diesel_price": 7.51,
+    "diesel_empty_rate": 0.12385,
+    "diesel_full_rate": 0.13641
+  },
+  "coordinate_distance_unit": null,
+  "source_cells": {
+    "U.d1": "D2",
+    "F.d1": "E2",
+    "extra_parameters.depot_carbon.d1": "F2",
+    "coordinates.d1": [
+      "B2",
+      "C2"
+    ],
+    "node_id.d1": "A2",
+    "U.d2": "D3",
+    "F.d2": "E3",
+    "extra_parameters.depot_carbon.d2": "F3",
+    "coordinates.d2": [
+      "B3",
+      "C3"
+    ],
+    "node_id.d2": "A3",
+    "U.d3": "D4",
+    "F.d3": "E4",
+    "extra_parameters.depot_carbon.d3": "F4",
+    "coordinates.d3": [
+      "B4",
+      "C4"
+    ],
+    "node_id.d3": "A4",
+    "U.d4": "D5",
+    "F.d4": "E5",
+    "extra_parameters.depot_carbon.d4": "F5",
+    "coordinates.d4": [
+      "B5",
+      "C5"
+    ],
+    "node_id.d4": "A5",
+    "U.d5": "D6",
+    "F.d5": "E6",
+    "extra_parameters.depot_carbon.d5": "F6",
+    "coordinates.d5": [
+      "B6",
+      "C6"
+    ],
+    "node_id.d5": "A6",
+    "q.c1": "D7",
+    "coordinates.c1": [
+      "B7",
+      "C7"
+    ],
+    "node_id.c1": "A7",
+    "q.c2": "D8",
+    "coordinates.c2": [
+      "B8",
+      "C8"
+    ],
+    "node_id.c2": "A8",
+    "q.c3": "D9",
+    "coordinates.c3": [
+      "B9",
+      "C9"
+    ],
+    "node_id.c3": "A9",
+    "q.c4": "D10",
+    "coordinates.c4": [
+      "B10",
+      "C10"
+    ],
+    "node_id.c4": "A10",
+    "q.c5": "D11",
+    "coordinates.c5": [
+      "B11",
+      "C11"
+    ],
+    "node_id.c5": "A11",
+    "q.c6": "D12",
+    "coordinates.c6": [
+      "B12",
+      "C12"
+    ],
+    "node_id.c6": "A12",
+    "q.c7": "D13",
+    "coordinates.c7": [
+      "B13",
+      "C13"
+    ],
+    "node_id.c7": "A13",
+    "q.c8": "D14",
+    "coordinates.c8": [
+      "B14",
+      "C14"
+    ],
+    "node_id.c8": "A14",
+    "q.c9": "D15",
+    "coordinates.c9": [
+      "B15",
+      "C15"
+    ],
+    "node_id.c9": "A15",
+    "q.c10": "D16",
+    "coordinates.c10": [
+      "B16",
+      "C16"
+    ],
+    "node_id.c10": "A16",
+    "q.c11": "D17",
+    "coordinates.c11": [
+      "B17",
+      "C17"
+    ],
+    "node_id.c11": "A17",
+    "q.c12": "D18",
+    "coordinates.c12": [
+      "B18",
+      "C18"
+    ],
+    "node_id.c12": "A18",
+    "q.c13": "D19",
+    "coordinates.c13": [
+      "B19",
+      "C19"
+    ],
+    "node_id.c13": "A19",
+    "q.c14": "D20",
+    "coordinates.c14": [
+      "B20",
+      "C20"
+    ],
+    "node_id.c14": "A20",
+    "q.c15": "D21",
+    "coordinates.c15": [
+      "B21",
+      "C21"
+    ],
+    "node_id.c15": "A21",
+    "q.c16": "D22",
+    "coordinates.c16": [
+      "B22",
+      "C22"
+    ],
+    "node_id.c16": "A22",
+    "q.c17": "D23",
+    "coordinates.c17": [
+      "B23",
+      "C23"
+    ],
+    "node_id.c17": "A23",
+    "q.c18": "D24",
+    "coordinates.c18": [
+      "B24",
+      "C24"
+    ],
+    "node_id.c18": "A24",
+    "q.c19": "D25",
+    "coordinates.c19": [
+      "B25",
+      "C25"
+    ],
+    "node_id.c19": "A25",
+    "q.c20": "D26",
+    "coordinates.c20": [
+      "B26",
+      "C26"
+    ],
+    "node_id.c20": "A26",
+    "q.c21": "D27",
+    "coordinates.c21": [
+      "B27",
+      "C27"
+    ],
+    "node_id.c21": "A27",
+    "q.c22": "D28",
+    "coordinates.c22": [
+      "B28",
+      "C28"
+    ],
+    "node_id.c22": "A28",
+    "q.c23": "D29",
+    "coordinates.c23": [
+      "B29",
+      "C29"
+    ],
+    "node_id.c23": "A29",
+    "q.c24": "D30",
+    "coordinates.c24": [
+      "B30",
+      "C30"
+    ],
+    "node_id.c24": "A30",
+    "q.c25": "D31",
+    "coordinates.c25": [
+      "B31",
+      "C31"
+    ],
+    "node_id.c25": "A31",
+    "q.c26": "D32",
+    "coordinates.c26": [
+      "B32",
+      "C32"
+    ],
+    "node_id.c26": "A32",
+    "q.c27": "D33",
+    "coordinates.c27": [
+      "B33",
+      "C33"
+    ],
+    "node_id.c27": "A33",
+    "q.c28": "D34",
+    "coordinates.c28": [
+      "B34",
+      "C34"
+    ],
+    "node_id.c28": "A34",
+    "q.c29": "D35",
+    "coordinates.c29": [
+      "B35",
+      "C35"
+    ],
+    "node_id.c29": "A35",
+    "q.c30": "D36",
+    "coordinates.c30": [
+      "B36",
+      "C36"
+    ],
+    "node_id.c30": "A36",
+    "q.c31": "D37",
+    "coordinates.c31": [
+      "B37",
+      "C37"
+    ],
+    "node_id.c31": "A37",
+    "q.c32": "D38",
+    "coordinates.c32": [
+      "B38",
+      "C38"
+    ],
+    "node_id.c32": "A38",
+    "q.c33": "D39",
+    "coordinates.c33": [
+      "B39",
+      "C39"
+    ],
+    "node_id.c33": "A39",
+    "q.c34": "D40",
+    "coordinates.c34": [
+      "B40",
+      "C40"
+    ],
+    "node_id.c34": "A40",
+    "q.c35": "D41",
+    "coordinates.c35": [
+      "B41",
+      "C41"
+    ],
+    "node_id.c35": "A41",
+    "q.c36": "D42",
+    "coordinates.c36": [
+      "B42",
+      "C42"
+    ],
+    "node_id.c36": "A42",
+    "q.c37": "D43",
+    "coordinates.c37": [
+      "B43",
+      "C43"
+    ],
+    "node_id.c37": "A43",
+    "q.c38": "D44",
+    "coordinates.c38": [
+      "B44",
+      "C44"
+    ],
+    "node_id.c38": "A44",
+    "q.c39": "D45",
+    "coordinates.c39": [
+      "B45",
+      "C45"
+    ],
+    "node_id.c39": "A45",
+    "q.c40": "D46",
+    "coordinates.c40": [
+      "B46",
+      "C46"
+    ],
+    "node_id.c40": "A46",
+    "q.c41": "D47",
+    "coordinates.c41": [
+      "B47",
+      "C47"
+    ],
+    "node_id.c41": "A47",
+    "q.c42": "D48",
+    "coordinates.c42": [
+      "B48",
+      "C48"
+    ],
+    "node_id.c42": "A48",
+    "q.c43": "D49",
+    "coordinates.c43": [
+      "B49",
+      "C49"
+    ],
+    "node_id.c43": "A49",
+    "q.c44": "D50",
+    "coordinates.c44": [
+      "B50",
+      "C50"
+    ],
+    "node_id.c44": "A50",
+    "q.c45": "D51",
+    "coordinates.c45": [
+      "B51",
+      "C51"
+    ],
+    "node_id.c45": "A51",
+    "q.c46": "D52",
+    "coordinates.c46": [
+      "B52",
+      "C52"
+    ],
+    "node_id.c46": "A52",
+    "q.c47": "D53",
+    "coordinates.c47": [
+      "B53",
+      "C53"
+    ],
+    "node_id.c47": "A53",
+    "q.c48": "D54",
+    "coordinates.c48": [
+      "B54",
+      "C54"
+    ],
+    "node_id.c48": "A54",
+    "q.c49": "D55",
+    "coordinates.c49": [
+      "B55",
+      "C55"
+    ],
+    "node_id.c49": "A55",
+    "q.c50": "D56",
+    "coordinates.c50": [
+      "B56",
+      "C56"
+    ],
+    "node_id.c50": "A56",
+    "Q": "J8",
+    "h": "J9",
+    "route_cost_type": "J10",
+    "carbon_price": "J15",
+    "emission_coefficient": "J16",
+    "p": "J19",
+    "r0": "J20",
+    "r1": "J21",
+    "B": "J22",
+    "diesel_price": "J28",
+    "diesel_empty_rate": "J29",
+    "diesel_full_rate": "J30"
+  },
+  "original_notes": [
+    {
+      "cell": "K11",
+      "text": "To calculate the matrix distance (or the cost to link any 2 points A and B in the graph), we use the mathematical formula:\n\nsqrt( (xA-xB)² + (yA-yB)² )【欧几何距离公式】\n\nThe results are stored in a float variable (in C language) if the costs are real (code 1)\nThe result is multiplied by 100 and truncked to be stored in an integer variable if the costs are interger (code 0)."
+    }
+  ],
+  "original_vehicle_capacity": "70/150",
+  "provenance": {
+    "workbook": "Dataset - Prins LRP original instances and adapted instances.xlsx",
+    "workbook_sha256": "fc683bba6ab31294e0ecdefd4b7ee1cdc98a3e966d9b2b14892224496c24e6c3",
+    "sheet": "G50-5-2ab",
+    "source_snapshot": "source_sheets/G50-5-2ab.json",
+    "capacity_choice": 70,
+    "capacity_source_value": "70/150",
+    "capacity_source_cell": "J8"
+  }
+}

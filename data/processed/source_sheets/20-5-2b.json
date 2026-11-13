@@ -1,0 +1,362 @@
+{
+  "sheet": "20-5-2b",
+  "cells": {
+    "A1": {
+      "value": "number of available depots/number of customers"
+    },
+    "B1": {
+      "value": "coordinates for the depots/customers (x and y)"
+    },
+    "C1": {
+      "value": "coordinates for the depots/customers (x and y)"
+    },
+    "D1": {
+      "value": "depot capacities/customers demands"
+    },
+    "E1": {
+      "value": "opening costs for the depots"
+    },
+    "A2": {
+      "value": "d1"
+    },
+    "B2": {
+      "value": 6
+    },
+    "C2": {
+      "value": 11
+    },
+    "D2": {
+      "value": 150
+    },
+    "E2": {
+      "value": 13551
+    },
+    "A3": {
+      "value": "d2"
+    },
+    "B3": {
+      "value": 10
+    },
+    "C3": {
+      "value": 43
+    },
+    "D3": {
+      "value": 150
+    },
+    "E3": {
+      "value": 5843
+    },
+    "A4": {
+      "value": "d3"
+    },
+    "B4": {
+      "value": 1
+    },
+    "C4": {
+      "value": 33
+    },
+    "D4": {
+      "value": 300
+    },
+    "E4": {
+      "value": 9037
+    },
+    "A5": {
+      "value": "d4"
+    },
+    "B5": {
+      "value": 14
+    },
+    "C5": {
+      "value": 23
+    },
+    "D5": {
+      "value": 300
+    },
+    "E5": {
+      "value": 8068
+    },
+    "A6": {
+      "value": "d5"
+    },
+    "B6": {
+      "value": 27
+    },
+    "C6": {
+      "value": 48
+    },
+    "D6": {
+      "value": 150
+    },
+    "E6": {
+      "value": 13671
+    },
+    "A7": {
+      "value": 1
+    },
+    "B7": {
+      "value": 12
+    },
+    "C7": {
+      "value": 21
+    },
+    "D7": {
+      "value": 11
+    },
+    "A8": {
+      "value": 2
+    },
+    "B8": {
+      "value": 1
+    },
+    "C8": {
+      "value": 2
+    },
+    "D8": {
+      "value": 15
+    },
+    "A9": {
+      "value": 3
+    },
+    "B9": {
+      "value": 11
+    },
+    "C9": {
+      "value": 28
+    },
+    "D9": {
+      "value": 11
+    },
+    "A10": {
+      "value": 4
+    },
+    "B10": {
+      "value": 2
+    },
+    "C10": {
+      "value": 10
+    },
+    "D10": {
+      "value": 14
+    },
+    "A11": {
+      "value": 5
+    },
+    "B11": {
+      "value": 14
+    },
+    "C11": {
+      "value": 5
+    },
+    "D11": {
+      "value": 17
+    },
+    "F11": {
+      "value": "vehicle capacity"
+    },
+    "G11": {
+      "value": 150
+    },
+    "A12": {
+      "value": 6
+    },
+    "B12": {
+      "value": 10
+    },
+    "C12": {
+      "value": 12
+    },
+    "D12": {
+      "value": 13
+    },
+    "F12": {
+      "value": "opening cost of a route (cost of a vehicle)"
+    },
+    "G12": {
+      "value": 1000
+    },
+    "A13": {
+      "value": 7
+    },
+    "B13": {
+      "value": 23
+    },
+    "C13": {
+      "value": 24
+    },
+    "D13": {
+      "value": 14
+    },
+    "F13": {
+      "value": "route cost type"
+    },
+    "G13": {
+      "value": 0
+    },
+    "H13": {
+      "value": "0 means that the costs are integer"
+    },
+    "I13": {
+      "value": "1 that costs are real"
+    },
+    "A14": {
+      "value": 8
+    },
+    "B14": {
+      "value": 24
+    },
+    "C14": {
+      "value": 11
+    },
+    "D14": {
+      "value": 15
+    },
+    "H14": {
+      "value": "To calculate the matrix distance (or the cost to link any 2 points A and B in the graph), we use the mathematical formula:\n\nsqrt( (xA-xB)² + (yA-yB)² )【欧几何距离公式】\n\nThe results are stored in a float variable (in C language) if the costs are real (code 1)\nThe result is multiplied by 100 and truncked to be stored in an integer variable if the costs are interger (code 0)."
+    },
+    "A15": {
+      "value": 9
+    },
+    "B15": {
+      "value": 8
+    },
+    "C15": {
+      "value": 30
+    },
+    "D15": {
+      "value": 13
+    },
+    "A16": {
+      "value": 10
+    },
+    "B16": {
+      "value": 11
+    },
+    "C16": {
+      "value": 27
+    },
+    "D16": {
+      "value": 17
+    },
+    "A17": {
+      "value": 11
+    },
+    "B17": {
+      "value": 29
+    },
+    "C17": {
+      "value": 42
+    },
+    "D17": {
+      "value": 16
+    },
+    "A18": {
+      "value": 12
+    },
+    "B18": {
+      "value": 26
+    },
+    "C18": {
+      "value": 47
+    },
+    "D18": {
+      "value": 18
+    },
+    "A19": {
+      "value": 13
+    },
+    "B19": {
+      "value": 30
+    },
+    "C19": {
+      "value": 36
+    },
+    "D19": {
+      "value": 12
+    },
+    "A20": {
+      "value": 14
+    },
+    "B20": {
+      "value": 37
+    },
+    "C20": {
+      "value": 28
+    },
+    "D20": {
+      "value": 19
+    },
+    "A21": {
+      "value": 15
+    },
+    "B21": {
+      "value": 31
+    },
+    "C21": {
+      "value": 27
+    },
+    "D21": {
+      "value": 18
+    },
+    "A22": {
+      "value": 16
+    },
+    "B22": {
+      "value": 42
+    },
+    "C22": {
+      "value": 35
+    },
+    "D22": {
+      "value": 15
+    },
+    "A23": {
+      "value": 17
+    },
+    "B23": {
+      "value": 42
+    },
+    "C23": {
+      "value": 47
+    },
+    "D23": {
+      "value": 16
+    },
+    "A24": {
+      "value": 18
+    },
+    "B24": {
+      "value": 41
+    },
+    "C24": {
+      "value": 23
+    },
+    "D24": {
+      "value": 14
+    },
+    "A25": {
+      "value": 19
+    },
+    "B25": {
+      "value": 36
+    },
+    "C25": {
+      "value": 45
+    },
+    "D25": {
+      "value": 20
+    },
+    "A26": {
+      "value": 20
+    },
+    "B26": {
+      "value": 43
+    },
+    "C26": {
+      "value": 34
+    },
+    "D26": {
+      "value": 14
+    }
+  }
+}

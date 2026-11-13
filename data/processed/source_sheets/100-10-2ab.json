@@ -1,0 +1,1394 @@
+{
+  "sheet": "100-10-2ab",
+  "cells": {
+    "A1": {
+      "value": "number of available depots/number of customers"
+    },
+    "B1": {
+      "value": "coordinates for the depots/customers (x and y)"
+    },
+    "C1": {
+      "value": "coordinates for the depots/customers (x and y)"
+    },
+    "D1": {
+      "value": "depot capacities/customers demands"
+    },
+    "E1": {
+      "value": "opening costs for the depots"
+    },
+    "A2": {
+      "value": "d1"
+    },
+    "B2": {
+      "value": 2
+    },
+    "C2": {
+      "value": 45
+    },
+    "D2": {
+      "value": 490
+    },
+    "E2": {
+      "value": 46382
+    },
+    "A3": {
+      "value": "d2"
+    },
+    "B3": {
+      "value": 27
+    },
+    "C3": {
+      "value": 37
+    },
+    "D3": {
+      "value": 560
+    },
+    "E3": {
+      "value": 54917
+    },
+    "A4": {
+      "value": "d3"
+    },
+    "B4": {
+      "value": 38
+    },
+    "C4": {
+      "value": 16
+    },
+    "D4": {
+      "value": 560
+    },
+    "E4": {
+      "value": 51287
+    },
+    "A5": {
+      "value": "d4"
+    },
+    "B5": {
+      "value": 41
+    },
+    "C5": {
+      "value": 10
+    },
+    "D5": {
+      "value": 490
+    },
+    "E5": {
+      "value": 49367
+    },
+    "A6": {
+      "value": "d5"
+    },
+    "B6": {
+      "value": 41
+    },
+    "C6": {
+      "value": 40
+    },
+    "D6": {
+      "value": 490
+    },
+    "E6": {
+      "value": 44212
+    },
+    "A7": {
+      "value": "d6"
+    },
+    "B7": {
+      "value": 16
+    },
+    "C7": {
+      "value": 11
+    },
+    "D7": {
+      "value": 560
+    },
+    "E7": {
+      "value": 50457
+    },
+    "A8": {
+      "value": "d7"
+    },
+    "B8": {
+      "value": 17
+    },
+    "C8": {
+      "value": 12
+    },
+    "D8": {
+      "value": 560
+    },
+    "E8": {
+      "value": 55271
+    },
+    "A9": {
+      "value": "d8"
+    },
+    "B9": {
+      "value": 45
+    },
+    "C9": {
+      "value": 45
+    },
+    "D9": {
+      "value": 490
+    },
+    "E9": {
+      "value": 52516
+    },
+    "A10": {
+      "value": "d9"
+    },
+    "B10": {
+      "value": 21
+    },
+    "C10": {
+      "value": 32
+    },
+    "D10": {
+      "value": 420
+    },
+    "E10": {
+      "value": 48721
+    },
+    "A11": {
+      "value": "d10"
+    },
+    "B11": {
+      "value": 21
+    },
+    "C11": {
+      "value": 47
+    },
+    "D11": {
+      "value": 490
+    },
+    "E11": {
+      "value": 57295
+    },
+    "A12": {
+      "value": 1
+    },
+    "B12": {
+      "value": 21
+    },
+    "C12": {
+      "value": 13
+    },
+    "D12": {
+      "value": 16
+    },
+    "A13": {
+      "value": 2
+    },
+    "B13": {
+      "value": 12
+    },
+    "C13": {
+      "value": 24
+    },
+    "D13": {
+      "value": 18
+    },
+    "F13": {
+      "value": "vehicle capacity"
+    },
+    "G13": {
+      "value": "70/150"
+    },
+    "A14": {
+      "value": 3
+    },
+    "B14": {
+      "value": 12
+    },
+    "C14": {
+      "value": 25
+    },
+    "D14": {
+      "value": 15
+    },
+    "F14": {
+      "value": "opening cost of a route (cost of a vehicle)"
+    },
+    "G14": {
+      "value": 1000
+    },
+    "A15": {
+      "value": 4
+    },
+    "B15": {
+      "value": 25
+    },
+    "C15": {
+      "value": 25
+    },
+    "D15": {
+      "value": 19
+    },
+    "F15": {
+      "value": "route cost type"
+    },
+    "G15": {
+      "value": 0
+    },
+    "H15": {
+      "value": "0 means that the costs are integer"
+    },
+    "A16": {
+      "value": 5
+    },
+    "B16": {
+      "value": 24
+    },
+    "C16": {
+      "value": 7
+    },
+    "D16": {
+      "value": 14
+    },
+    "H16": {
+      "value": "To calculate the matrix distance (or the cost to link any 2 points A and B in the graph), we use the mathematical formula:\n\nsqrt( (xA-xB)² + (yA-yB)² )【欧几何距离公式】\n\nThe results are stored in a float variable (in C language) if the costs are real (code 1)\nThe result is multiplied by 100 and truncked to be stored in an integer variable if the costs are interger (code 0)."
+    },
+    "A17": {
+      "value": 6
+    },
+    "B17": {
+      "value": 25
+    },
+    "C17": {
+      "value": 12
+    },
+    "D17": {
+      "value": 18
+    },
+    "A18": {
+      "value": 7
+    },
+    "B18": {
+      "value": 3
+    },
+    "C18": {
+      "value": 21
+    },
+    "D18": {
+      "value": 13
+    },
+    "A19": {
+      "value": 8
+    },
+    "B19": {
+      "value": 12
+    },
+    "C19": {
+      "value": 1
+    },
+    "D19": {
+      "value": 11
+    },
+    "A20": {
+      "value": 9
+    },
+    "B20": {
+      "value": 9
+    },
+    "C20": {
+      "value": 6
+    },
+    "D20": {
+      "value": 13
+    },
+    "A21": {
+      "value": 10
+    },
+    "B21": {
+      "value": 16
+    },
+    "C21": {
+      "value": 8
+    },
+    "D21": {
+      "value": 13
+    },
+    "A22": {
+      "value": 11
+    },
+    "B22": {
+      "value": 24
+    },
+    "C22": {
+      "value": 9
+    },
+    "D22": {
+      "value": 16
+    },
+    "A23": {
+      "value": 12
+    },
+    "B23": {
+      "value": 14
+    },
+    "C23": {
+      "value": 8
+    },
+    "D23": {
+      "value": 13
+    },
+    "A24": {
+      "value": 13
+    },
+    "B24": {
+      "value": 5
+    },
+    "C24": {
+      "value": 21
+    },
+    "D24": {
+      "value": 18
+    },
+    "A25": {
+      "value": 14
+    },
+    "B25": {
+      "value": 19
+    },
+    "C25": {
+      "value": 17
+    },
+    "D25": {
+      "value": 19
+    },
+    "A26": {
+      "value": 15
+    },
+    "B26": {
+      "value": 25
+    },
+    "C26": {
+      "value": 8
+    },
+    "D26": {
+      "value": 16
+    },
+    "A27": {
+      "value": 16
+    },
+    "B27": {
+      "value": 11
+    },
+    "C27": {
+      "value": 15
+    },
+    "D27": {
+      "value": 20
+    },
+    "A28": {
+      "value": 17
+    },
+    "B28": {
+      "value": 20
+    },
+    "C28": {
+      "value": 5
+    },
+    "D28": {
+      "value": 20
+    },
+    "A29": {
+      "value": 18
+    },
+    "B29": {
+      "value": 19
+    },
+    "C29": {
+      "value": 13
+    },
+    "D29": {
+      "value": 15
+    },
+    "A30": {
+      "value": 19
+    },
+    "B30": {
+      "value": 25
+    },
+    "C30": {
+      "value": 10
+    },
+    "D30": {
+      "value": 15
+    },
+    "A31": {
+      "value": 20
+    },
+    "B31": {
+      "value": 3
+    },
+    "C31": {
+      "value": 23
+    },
+    "D31": {
+      "value": 17
+    },
+    "A32": {
+      "value": 21
+    },
+    "B32": {
+      "value": 2
+    },
+    "C32": {
+      "value": 8
+    },
+    "D32": {
+      "value": 17
+    },
+    "A33": {
+      "value": 22
+    },
+    "B33": {
+      "value": 1
+    },
+    "C33": {
+      "value": 3
+    },
+    "D33": {
+      "value": 18
+    },
+    "A34": {
+      "value": 23
+    },
+    "B34": {
+      "value": 19
+    },
+    "C34": {
+      "value": 6
+    },
+    "D34": {
+      "value": 17
+    },
+    "A35": {
+      "value": 24
+    },
+    "B35": {
+      "value": 3
+    },
+    "C35": {
+      "value": 14
+    },
+    "D35": {
+      "value": 15
+    },
+    "A36": {
+      "value": 25
+    },
+    "B36": {
+      "value": 24
+    },
+    "C36": {
+      "value": 21
+    },
+    "D36": {
+      "value": 11
+    },
+    "A37": {
+      "value": 26
+    },
+    "B37": {
+      "value": 1
+    },
+    "C37": {
+      "value": 24
+    },
+    "D37": {
+      "value": 13
+    },
+    "A38": {
+      "value": 27
+    },
+    "B38": {
+      "value": 15
+    },
+    "C38": {
+      "value": 6
+    },
+    "D38": {
+      "value": 15
+    },
+    "A39": {
+      "value": 28
+    },
+    "B39": {
+      "value": 20
+    },
+    "C39": {
+      "value": 27
+    },
+    "D39": {
+      "value": 11
+    },
+    "A40": {
+      "value": 29
+    },
+    "B40": {
+      "value": 26
+    },
+    "C40": {
+      "value": 2
+    },
+    "D40": {
+      "value": 18
+    },
+    "A41": {
+      "value": 30
+    },
+    "B41": {
+      "value": 9
+    },
+    "C41": {
+      "value": 16
+    },
+    "D41": {
+      "value": 13
+    },
+    "A42": {
+      "value": 31
+    },
+    "B42": {
+      "value": 23
+    },
+    "C42": {
+      "value": 16
+    },
+    "D42": {
+      "value": 17
+    },
+    "A43": {
+      "value": 32
+    },
+    "B43": {
+      "value": 6
+    },
+    "C43": {
+      "value": 20
+    },
+    "D43": {
+      "value": 20
+    },
+    "A44": {
+      "value": 33
+    },
+    "B44": {
+      "value": 20
+    },
+    "C44": {
+      "value": 2
+    },
+    "D44": {
+      "value": 11
+    },
+    "A45": {
+      "value": 34
+    },
+    "B45": {
+      "value": 4
+    },
+    "C45": {
+      "value": 19
+    },
+    "D45": {
+      "value": 12
+    },
+    "A46": {
+      "value": 35
+    },
+    "B46": {
+      "value": 22
+    },
+    "C46": {
+      "value": 8
+    },
+    "D46": {
+      "value": 19
+    },
+    "A47": {
+      "value": 36
+    },
+    "B47": {
+      "value": 3
+    },
+    "C47": {
+      "value": 12
+    },
+    "D47": {
+      "value": 16
+    },
+    "A48": {
+      "value": 37
+    },
+    "B48": {
+      "value": 25
+    },
+    "C48": {
+      "value": 8
+    },
+    "D48": {
+      "value": 18
+    },
+    "A49": {
+      "value": 38
+    },
+    "B49": {
+      "value": 12
+    },
+    "C49": {
+      "value": 26
+    },
+    "D49": {
+      "value": 16
+    },
+    "A50": {
+      "value": 39
+    },
+    "B50": {
+      "value": 4
+    },
+    "C50": {
+      "value": 17
+    },
+    "D50": {
+      "value": 17
+    },
+    "A51": {
+      "value": 40
+    },
+    "B51": {
+      "value": 21
+    },
+    "C51": {
+      "value": 16
+    },
+    "D51": {
+      "value": 16
+    },
+    "A52": {
+      "value": 41
+    },
+    "B52": {
+      "value": 22
+    },
+    "C52": {
+      "value": 11
+    },
+    "D52": {
+      "value": 12
+    },
+    "A53": {
+      "value": 42
+    },
+    "B53": {
+      "value": 21
+    },
+    "C53": {
+      "value": 24
+    },
+    "D53": {
+      "value": 14
+    },
+    "A54": {
+      "value": 43
+    },
+    "B54": {
+      "value": 7
+    },
+    "C54": {
+      "value": 5
+    },
+    "D54": {
+      "value": 18
+    },
+    "A55": {
+      "value": 44
+    },
+    "B55": {
+      "value": 3
+    },
+    "C55": {
+      "value": 8
+    },
+    "D55": {
+      "value": 20
+    },
+    "A56": {
+      "value": 45
+    },
+    "B56": {
+      "value": 22
+    },
+    "C56": {
+      "value": 4
+    },
+    "D56": {
+      "value": 16
+    },
+    "A57": {
+      "value": 46
+    },
+    "B57": {
+      "value": 24
+    },
+    "C57": {
+      "value": 14
+    },
+    "D57": {
+      "value": 16
+    },
+    "A58": {
+      "value": 47
+    },
+    "B58": {
+      "value": 4
+    },
+    "C58": {
+      "value": 24
+    },
+    "D58": {
+      "value": 15
+    },
+    "A59": {
+      "value": 48
+    },
+    "B59": {
+      "value": 25
+    },
+    "C59": {
+      "value": 14
+    },
+    "D59": {
+      "value": 12
+    },
+    "A60": {
+      "value": 49
+    },
+    "B60": {
+      "value": 1
+    },
+    "C60": {
+      "value": 28
+    },
+    "D60": {
+      "value": 19
+    },
+    "A61": {
+      "value": 50
+    },
+    "B61": {
+      "value": 12
+    },
+    "C61": {
+      "value": 9
+    },
+    "D61": {
+      "value": 11
+    },
+    "A62": {
+      "value": 51
+    },
+    "B62": {
+      "value": 43
+    },
+    "C62": {
+      "value": 48
+    },
+    "D62": {
+      "value": 11
+    },
+    "A63": {
+      "value": 52
+    },
+    "B63": {
+      "value": 34
+    },
+    "C63": {
+      "value": 24
+    },
+    "D63": {
+      "value": 12
+    },
+    "A64": {
+      "value": 53
+    },
+    "B64": {
+      "value": 27
+    },
+    "C64": {
+      "value": 25
+    },
+    "D64": {
+      "value": 15
+    },
+    "A65": {
+      "value": 54
+    },
+    "B65": {
+      "value": 48
+    },
+    "C65": {
+      "value": 26
+    },
+    "D65": {
+      "value": 14
+    },
+    "A66": {
+      "value": 55
+    },
+    "B66": {
+      "value": 25
+    },
+    "C66": {
+      "value": 32
+    },
+    "D66": {
+      "value": 13
+    },
+    "A67": {
+      "value": 56
+    },
+    "B67": {
+      "value": 34
+    },
+    "C67": {
+      "value": 48
+    },
+    "D67": {
+      "value": 12
+    },
+    "A68": {
+      "value": 57
+    },
+    "B68": {
+      "value": 27
+    },
+    "C68": {
+      "value": 33
+    },
+    "D68": {
+      "value": 12
+    },
+    "A69": {
+      "value": 58
+    },
+    "B69": {
+      "value": 45
+    },
+    "C69": {
+      "value": 24
+    },
+    "D69": {
+      "value": 12
+    },
+    "A70": {
+      "value": 59
+    },
+    "B70": {
+      "value": 45
+    },
+    "C70": {
+      "value": 26
+    },
+    "D70": {
+      "value": 12
+    },
+    "A71": {
+      "value": 60
+    },
+    "B71": {
+      "value": 28
+    },
+    "C71": {
+      "value": 44
+    },
+    "D71": {
+      "value": 13
+    },
+    "A72": {
+      "value": 61
+    },
+    "B72": {
+      "value": 38
+    },
+    "C72": {
+      "value": 42
+    },
+    "D72": {
+      "value": 19
+    },
+    "A73": {
+      "value": 62
+    },
+    "B73": {
+      "value": 42
+    },
+    "C73": {
+      "value": 26
+    },
+    "D73": {
+      "value": 14
+    },
+    "A74": {
+      "value": 63
+    },
+    "B74": {
+      "value": 25
+    },
+    "C74": {
+      "value": 41
+    },
+    "D74": {
+      "value": 15
+    },
+    "A75": {
+      "value": 64
+    },
+    "B75": {
+      "value": 28
+    },
+    "C75": {
+      "value": 33
+    },
+    "D75": {
+      "value": 15
+    },
+    "A76": {
+      "value": 65
+    },
+    "B76": {
+      "value": 36
+    },
+    "C76": {
+      "value": 33
+    },
+    "D76": {
+      "value": 14
+    },
+    "A77": {
+      "value": 66
+    },
+    "B77": {
+      "value": 38
+    },
+    "C77": {
+      "value": 28
+    },
+    "D77": {
+      "value": 16
+    },
+    "A78": {
+      "value": 67
+    },
+    "B78": {
+      "value": 39
+    },
+    "C78": {
+      "value": 45
+    },
+    "D78": {
+      "value": 13
+    },
+    "A79": {
+      "value": 68
+    },
+    "B79": {
+      "value": 42
+    },
+    "C79": {
+      "value": 31
+    },
+    "D79": {
+      "value": 11
+    },
+    "A80": {
+      "value": 69
+    },
+    "B80": {
+      "value": 43
+    },
+    "C80": {
+      "value": 28
+    },
+    "D80": {
+      "value": 19
+    },
+    "A81": {
+      "value": 70
+    },
+    "B81": {
+      "value": 29
+    },
+    "C81": {
+      "value": 43
+    },
+    "D81": {
+      "value": 20
+    },
+    "A82": {
+      "value": 71
+    },
+    "B82": {
+      "value": 29
+    },
+    "C82": {
+      "value": 26
+    },
+    "D82": {
+      "value": 19
+    },
+    "A83": {
+      "value": 72
+    },
+    "B83": {
+      "value": 29
+    },
+    "C83": {
+      "value": 42
+    },
+    "D83": {
+      "value": 19
+    },
+    "A84": {
+      "value": 73
+    },
+    "B84": {
+      "value": 38
+    },
+    "C84": {
+      "value": 34
+    },
+    "D84": {
+      "value": 18
+    },
+    "A85": {
+      "value": 74
+    },
+    "B85": {
+      "value": 46
+    },
+    "C85": {
+      "value": 28
+    },
+    "D85": {
+      "value": 11
+    },
+    "A86": {
+      "value": 75
+    },
+    "B86": {
+      "value": 30
+    },
+    "C86": {
+      "value": 24
+    },
+    "D86": {
+      "value": 18
+    },
+    "A87": {
+      "value": 76
+    },
+    "B87": {
+      "value": 50
+    },
+    "C87": {
+      "value": 30
+    },
+    "D87": {
+      "value": 13
+    },
+    "A88": {
+      "value": 77
+    },
+    "B88": {
+      "value": 44
+    },
+    "C88": {
+      "value": 26
+    },
+    "D88": {
+      "value": 19
+    },
+    "A89": {
+      "value": 78
+    },
+    "B89": {
+      "value": 45
+    },
+    "C89": {
+      "value": 49
+    },
+    "D89": {
+      "value": 16
+    },
+    "A90": {
+      "value": 79
+    },
+    "B90": {
+      "value": 49
+    },
+    "C90": {
+      "value": 43
+    },
+    "D90": {
+      "value": 19
+    },
+    "A91": {
+      "value": 80
+    },
+    "B91": {
+      "value": 50
+    },
+    "C91": {
+      "value": 27
+    },
+    "D91": {
+      "value": 11
+    },
+    "A92": {
+      "value": 81
+    },
+    "B92": {
+      "value": 43
+    },
+    "C92": {
+      "value": 33
+    },
+    "D92": {
+      "value": 11
+    },
+    "A93": {
+      "value": 82
+    },
+    "B93": {
+      "value": 29
+    },
+    "C93": {
+      "value": 49
+    },
+    "D93": {
+      "value": 15
+    },
+    "A94": {
+      "value": 83
+    },
+    "B94": {
+      "value": 40
+    },
+    "C94": {
+      "value": 37
+    },
+    "D94": {
+      "value": 15
+    },
+    "A95": {
+      "value": 84
+    },
+    "B95": {
+      "value": 36
+    },
+    "C95": {
+      "value": 31
+    },
+    "D95": {
+      "value": 16
+    },
+    "A96": {
+      "value": 85
+    },
+    "B96": {
+      "value": 46
+    },
+    "C96": {
+      "value": 45
+    },
+    "D96": {
+      "value": 17
+    },
+    "A97": {
+      "value": 86
+    },
+    "B97": {
+      "value": 49
+    },
+    "C97": {
+      "value": 46
+    },
+    "D97": {
+      "value": 11
+    },
+    "A98": {
+      "value": 87
+    },
+    "B98": {
+      "value": 45
+    },
+    "C98": {
+      "value": 41
+    },
+    "D98": {
+      "value": 13
+    },
+    "A99": {
+      "value": 88
+    },
+    "B99": {
+      "value": 28
+    },
+    "C99": {
+      "value": 36
+    },
+    "D99": {
+      "value": 17
+    },
+    "A100": {
+      "value": 89
+    },
+    "B100": {
+      "value": 43
+    },
+    "C100": {
+      "value": 50
+    },
+    "D100": {
+      "value": 20
+    },
+    "A101": {
+      "value": 90
+    },
+    "B101": {
+      "value": 45
+    },
+    "C101": {
+      "value": 48
+    },
+    "D101": {
+      "value": 17
+    },
+    "A102": {
+      "value": 91
+    },
+    "B102": {
+      "value": 48
+    },
+    "C102": {
+      "value": 27
+    },
+    "D102": {
+      "value": 18
+    },
+    "A103": {
+      "value": 92
+    },
+    "B103": {
+      "value": 33
+    },
+    "C103": {
+      "value": 24
+    },
+    "D103": {
+      "value": 20
+    },
+    "A104": {
+      "value": 93
+    },
+    "B104": {
+      "value": 48
+    },
+    "C104": {
+      "value": 33
+    },
+    "D104": {
+      "value": 20
+    },
+    "A105": {
+      "value": 94
+    },
+    "B105": {
+      "value": 39
+    },
+    "C105": {
+      "value": 38
+    },
+    "D105": {
+      "value": 18
+    },
+    "A106": {
+      "value": 95
+    },
+    "B106": {
+      "value": 45
+    },
+    "C106": {
+      "value": 49
+    },
+    "D106": {
+      "value": 13
+    },
+    "A107": {
+      "value": 96
+    },
+    "B107": {
+      "value": 27
+    },
+    "C107": {
+      "value": 26
+    },
+    "D107": {
+      "value": 20
+    },
+    "A108": {
+      "value": 97
+    },
+    "B108": {
+      "value": 33
+    },
+    "C108": {
+      "value": 44
+    },
+    "D108": {
+      "value": 14
+    },
+    "A109": {
+      "value": 98
+    },
+    "B109": {
+      "value": 33
+    },
+    "C109": {
+      "value": 29
+    },
+    "D109": {
+      "value": 11
+    },
+    "A110": {
+      "value": 99
+    },
+    "B110": {
+      "value": 32
+    },
+    "C110": {
+      "value": 46
+    },
+    "D110": {
+      "value": 12
+    },
+    "A111": {
+      "value": 100
+    },
+    "B111": {
+      "value": 40
+    },
+    "C111": {
+      "value": 35
+    },
+    "D111": {
+      "value": 11
+    }
+  }
+}

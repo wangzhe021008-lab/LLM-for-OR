@@ -1,0 +1,354 @@
+{
+  "format_version": "1.0",
+  "instance_id": "20-5-1a__Q70",
+  "source_sheet": "20-5-1a",
+  "D": [
+    "d1",
+    "d2",
+    "d3",
+    "d4",
+    "d5"
+  ],
+  "C": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6",
+    "c7",
+    "c8",
+    "c9",
+    "c10",
+    "c11",
+    "c12",
+    "c13",
+    "c14",
+    "c15",
+    "c16",
+    "c17",
+    "c18",
+    "c19",
+    "c20"
+  ],
+  "coordinates": {
+    "d1": {
+      "x": 6,
+      "y": 7
+    },
+    "d2": {
+      "x": 19,
+      "y": 44
+    },
+    "d3": {
+      "x": 37,
+      "y": 23
+    },
+    "d4": {
+      "x": 35,
+      "y": 6
+    },
+    "d5": {
+      "x": 5,
+      "y": 8
+    },
+    "c1": {
+      "x": 20,
+      "y": 35
+    },
+    "c2": {
+      "x": 8,
+      "y": 31
+    },
+    "c3": {
+      "x": 29,
+      "y": 43
+    },
+    "c4": {
+      "x": 18,
+      "y": 39
+    },
+    "c5": {
+      "x": 19,
+      "y": 47
+    },
+    "c6": {
+      "x": 31,
+      "y": 24
+    },
+    "c7": {
+      "x": 38,
+      "y": 50
+    },
+    "c8": {
+      "x": 33,
+      "y": 21
+    },
+    "c9": {
+      "x": 2,
+      "y": 27
+    },
+    "c10": {
+      "x": 1,
+      "y": 12
+    },
+    "c11": {
+      "x": 26,
+      "y": 20
+    },
+    "c12": {
+      "x": 20,
+      "y": 33
+    },
+    "c13": {
+      "x": 15,
+      "y": 46
+    },
+    "c14": {
+      "x": 20,
+      "y": 26
+    },
+    "c15": {
+      "x": 17,
+      "y": 19
+    },
+    "c16": {
+      "x": 15,
+      "y": 12
+    },
+    "c17": {
+      "x": 5,
+      "y": 30
+    },
+    "c18": {
+      "x": 13,
+      "y": 40
+    },
+    "c19": {
+      "x": 38,
+      "y": 5
+    },
+    "c20": {
+      "x": 9,
+      "y": 40
+    }
+  },
+  "q": {
+    "c1": 17,
+    "c2": 18,
+    "c3": 13,
+    "c4": 19,
+    "c5": 12,
+    "c6": 18,
+    "c7": 13,
+    "c8": 13,
+    "c9": 17,
+    "c10": 20,
+    "c11": 16,
+    "c12": 18,
+    "c13": 15,
+    "c14": 11,
+    "c15": 18,
+    "c16": 16,
+    "c17": 15,
+    "c18": 15,
+    "c19": 15,
+    "c20": 16
+  },
+  "U": {
+    "d1": 140,
+    "d2": 140,
+    "d3": 140,
+    "d4": 140,
+    "d5": 140
+  },
+  "F": {
+    "d1": 10841,
+    "d2": 11961,
+    "d3": 6091,
+    "d4": 7570,
+    "d5": 7497
+  },
+  "Q": 70,
+  "h": 1000,
+  "route_cost_type": 0,
+  "ev": {},
+  "extra_parameters": {},
+  "coordinate_distance_unit": null,
+  "source_cells": {
+    "U.d1": "D2",
+    "F.d1": "E2",
+    "coordinates.d1": [
+      "B2",
+      "C2"
+    ],
+    "node_id.d1": "A2",
+    "U.d2": "D3",
+    "F.d2": "E3",
+    "coordinates.d2": [
+      "B3",
+      "C3"
+    ],
+    "node_id.d2": "A3",
+    "U.d3": "D4",
+    "F.d3": "E4",
+    "coordinates.d3": [
+      "B4",
+      "C4"
+    ],
+    "node_id.d3": "A4",
+    "U.d4": "D5",
+    "F.d4": "E5",
+    "coordinates.d4": [
+      "B5",
+      "C5"
+    ],
+    "node_id.d4": "A5",
+    "U.d5": "D6",
+    "F.d5": "E6",
+    "coordinates.d5": [
+      "B6",
+      "C6"
+    ],
+    "node_id.d5": "A6",
+    "q.c1": "D7",
+    "coordinates.c1": [
+      "B7",
+      "C7"
+    ],
+    "node_id.c1": "A7",
+    "q.c2": "D8",
+    "coordinates.c2": [
+      "B8",
+      "C8"
+    ],
+    "node_id.c2": "A8",
+    "q.c3": "D9",
+    "coordinates.c3": [
+      "B9",
+      "C9"
+    ],
+    "node_id.c3": "A9",
+    "q.c4": "D10",
+    "coordinates.c4": [
+      "B10",
+      "C10"
+    ],
+    "node_id.c4": "A10",
+    "q.c5": "D11",
+    "coordinates.c5": [
+      "B11",
+      "C11"
+    ],
+    "node_id.c5": "A11",
+    "q.c6": "D12",
+    "coordinates.c6": [
+      "B12",
+      "C12"
+    ],
+    "node_id.c6": "A12",
+    "q.c7": "D13",
+    "coordinates.c7": [
+      "B13",
+      "C13"
+    ],
+    "node_id.c7": "A13",
+    "q.c8": "D14",
+    "coordinates.c8": [
+      "B14",
+      "C14"
+    ],
+    "node_id.c8": "A14",
+    "q.c9": "D15",
+    "coordinates.c9": [
+      "B15",
+      "C15"
+    ],
+    "node_id.c9": "A15",
+    "q.c10": "D16",
+    "coordinates.c10": [
+      "B16",
+      "C16"
+    ],
+    "node_id.c10": "A16",
+    "q.c11": "D17",
+    "coordinates.c11": [
+      "B17",
+      "C17"
+    ],
+    "node_id.c11": "A17",
+    "q.c12": "D18",
+    "coordinates.c12": [
+      "B18",
+      "C18"
+    ],
+    "node_id.c12": "A18",
+    "q.c13": "D19",
+    "coordinates.c13": [
+      "B19",
+      "C19"
+    ],
+    "node_id.c13": "A19",
+    "q.c14": "D20",
+    "coordinates.c14": [
+      "B20",
+      "C20"
+    ],
+    "node_id.c14": "A20",
+    "q.c15": "D21",
+    "coordinates.c15": [
+      "B21",
+      "C21"
+    ],
+    "node_id.c15": "A21",
+    "q.c16": "D22",
+    "coordinates.c16": [
+      "B22",
+      "C22"
+    ],
+    "node_id.c16": "A22",
+    "q.c17": "D23",
+    "coordinates.c17": [
+      "B23",
+      "C23"
+    ],
+    "node_id.c17": "A23",
+    "q.c18": "D24",
+    "coordinates.c18": [
+      "B24",
+      "C24"
+    ],
+    "node_id.c18": "A24",
+    "q.c19": "D25",
+    "coordinates.c19": [
+      "B25",
+      "C25"
+    ],
+    "node_id.c19": "A25",
+    "q.c20": "D26",
+    "coordinates.c20": [
+      "B26",
+      "C26"
+    ],
+    "node_id.c20": "A26",
+    "Q": "G11",
+    "h": "G12",
+    "route_cost_type": "G13"
+  },
+  "original_notes": [
+    {
+      "cell": "H14",
+      "text": "To calculate the matrix distance (or the cost to link any 2 points A and B in the graph), we use the mathematical formula:\n\nsqrt( (xA-xB)² + (yA-yB)² )【欧几何距离公式】\n\nThe results are stored in a float variable (in C language) if the costs are real (code 1)\nThe result is multiplied by 100 and truncked to be stored in an integer variable if the costs are interger (code 0)."
+    }
+  ],
+  "original_vehicle_capacity": 70,
+  "provenance": {
+    "workbook": "Dataset - Prins LRP original instances and adapted instances.xlsx",
+    "workbook_sha256": "fc683bba6ab31294e0ecdefd4b7ee1cdc98a3e966d9b2b14892224496c24e6c3",
+    "sheet": "20-5-1a",
+    "source_snapshot": "source_sheets/20-5-1a.json",
+    "capacity_choice": 70,
+    "capacity_source_value": 70,
+    "capacity_source_cell": "G11"
+  }
+}

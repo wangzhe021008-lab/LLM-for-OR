@@ -1,0 +1,387 @@
+{
+  "format_version": "1.0",
+  "workbook": "Dataset - Prins LRP original instances and adapted instances.xlsx",
+  "workbook_sha256": "fc683bba6ab31294e0ecdefd4b7ee1cdc98a3e966d9b2b14892224496c24e6c3",
+  "sheet_count": 24,
+  "split_sheet_count": 17,
+  "instance_count": 41,
+  "instances": [
+    {
+      "instance_id": "20-5-1a__Q70",
+      "source_sheet": "20-5-1a",
+      "Q": 70,
+      "depots": 5,
+      "customers": 20,
+      "has_ev_parameters": false,
+      "path": "instances/20-5-1a__Q70.json"
+    },
+    {
+      "instance_id": "20-5-2a__Q70",
+      "source_sheet": "20-5-2a",
+      "Q": 70,
+      "depots": 5,
+      "customers": 20,
+      "has_ev_parameters": false,
+      "path": "instances/20-5-2a__Q70.json"
+    },
+    {
+      "instance_id": "20-5-2b__Q150",
+      "source_sheet": "20-5-2b",
+      "Q": 150,
+      "depots": 5,
+      "customers": 20,
+      "has_ev_parameters": false,
+      "path": "instances/20-5-2b__Q150.json"
+    },
+    {
+      "instance_id": "50-5-2ab__Q70",
+      "source_sheet": "50-5-2ab",
+      "Q": 70,
+      "depots": 5,
+      "customers": 50,
+      "has_ev_parameters": false,
+      "path": "instances/50-5-2ab__Q70.json"
+    },
+    {
+      "instance_id": "50-5-2ab__Q150",
+      "source_sheet": "50-5-2ab",
+      "Q": 150,
+      "depots": 5,
+      "customers": 50,
+      "has_ev_parameters": false,
+      "path": "instances/50-5-2ab__Q150.json"
+    },
+    {
+      "instance_id": "50-5-2BIS__Q70",
+      "source_sheet": "50-5-2BIS",
+      "Q": 70,
+      "depots": 5,
+      "customers": 50,
+      "has_ev_parameters": false,
+      "path": "instances/50-5-2BIS__Q70.json"
+    },
+    {
+      "instance_id": "50-5-2bBIS__Q150",
+      "source_sheet": "50-5-2bBIS",
+      "Q": 150,
+      "depots": 5,
+      "customers": 50,
+      "has_ev_parameters": false,
+      "path": "instances/50-5-2bBIS__Q150.json"
+    },
+    {
+      "instance_id": "50-5-3ab__Q70",
+      "source_sheet": "50-5-3ab",
+      "Q": 70,
+      "depots": 5,
+      "customers": 50,
+      "has_ev_parameters": false,
+      "path": "instances/50-5-3ab__Q70.json"
+    },
+    {
+      "instance_id": "50-5-3ab__Q150",
+      "source_sheet": "50-5-3ab",
+      "Q": 150,
+      "depots": 5,
+      "customers": 50,
+      "has_ev_parameters": false,
+      "path": "instances/50-5-3ab__Q150.json"
+    },
+    {
+      "instance_id": "100-5-1ab__Q70",
+      "source_sheet": "100-5-1ab",
+      "Q": 70,
+      "depots": 5,
+      "customers": 100,
+      "has_ev_parameters": false,
+      "path": "instances/100-5-1ab__Q70.json"
+    },
+    {
+      "instance_id": "100-5-1ab__Q150",
+      "source_sheet": "100-5-1ab",
+      "Q": 150,
+      "depots": 5,
+      "customers": 100,
+      "has_ev_parameters": false,
+      "path": "instances/100-5-1ab__Q150.json"
+    },
+    {
+      "instance_id": "100-5-2ab__Q70",
+      "source_sheet": "100-5-2ab",
+      "Q": 70,
+      "depots": 5,
+      "customers": 100,
+      "has_ev_parameters": false,
+      "path": "instances/100-5-2ab__Q70.json"
+    },
+    {
+      "instance_id": "100-5-2ab__Q150",
+      "source_sheet": "100-5-2ab",
+      "Q": 150,
+      "depots": 5,
+      "customers": 100,
+      "has_ev_parameters": false,
+      "path": "instances/100-5-2ab__Q150.json"
+    },
+    {
+      "instance_id": "100-5-3ab__Q70",
+      "source_sheet": "100-5-3ab",
+      "Q": 70,
+      "depots": 5,
+      "customers": 100,
+      "has_ev_parameters": false,
+      "path": "instances/100-5-3ab__Q70.json"
+    },
+    {
+      "instance_id": "100-5-3ab__Q150",
+      "source_sheet": "100-5-3ab",
+      "Q": 150,
+      "depots": 5,
+      "customers": 100,
+      "has_ev_parameters": false,
+      "path": "instances/100-5-3ab__Q150.json"
+    },
+    {
+      "instance_id": "100-10-1ab__Q70",
+      "source_sheet": "100-10-1ab",
+      "Q": 70,
+      "depots": 10,
+      "customers": 100,
+      "has_ev_parameters": false,
+      "path": "instances/100-10-1ab__Q70.json"
+    },
+    {
+      "instance_id": "100-10-1ab__Q150",
+      "source_sheet": "100-10-1ab",
+      "Q": 150,
+      "depots": 10,
+      "customers": 100,
+      "has_ev_parameters": false,
+      "path": "instances/100-10-1ab__Q150.json"
+    },
+    {
+      "instance_id": "100-10-2ab__Q70",
+      "source_sheet": "100-10-2ab",
+      "Q": 70,
+      "depots": 10,
+      "customers": 100,
+      "has_ev_parameters": false,
+      "path": "instances/100-10-2ab__Q70.json"
+    },
+    {
+      "instance_id": "100-10-2ab__Q150",
+      "source_sheet": "100-10-2ab",
+      "Q": 150,
+      "depots": 10,
+      "customers": 100,
+      "has_ev_parameters": false,
+      "path": "instances/100-10-2ab__Q150.json"
+    },
+    {
+      "instance_id": "100-10-3ab__Q70",
+      "source_sheet": "100-10-3ab",
+      "Q": 70,
+      "depots": 10,
+      "customers": 100,
+      "has_ev_parameters": false,
+      "path": "instances/100-10-3ab__Q70.json"
+    },
+    {
+      "instance_id": "100-10-3ab__Q150",
+      "source_sheet": "100-10-3ab",
+      "Q": 150,
+      "depots": 10,
+      "customers": 100,
+      "has_ev_parameters": false,
+      "path": "instances/100-10-3ab__Q150.json"
+    },
+    {
+      "instance_id": "200-10-1ab__Q70",
+      "source_sheet": "200-10-1ab",
+      "Q": 70,
+      "depots": 10,
+      "customers": 200,
+      "has_ev_parameters": false,
+      "path": "instances/200-10-1ab__Q70.json"
+    },
+    {
+      "instance_id": "200-10-1ab__Q150",
+      "source_sheet": "200-10-1ab",
+      "Q": 150,
+      "depots": 10,
+      "customers": 200,
+      "has_ev_parameters": false,
+      "path": "instances/200-10-1ab__Q150.json"
+    },
+    {
+      "instance_id": "200-10-2ab__Q70",
+      "source_sheet": "200-10-2ab",
+      "Q": 70,
+      "depots": 10,
+      "customers": 200,
+      "has_ev_parameters": false,
+      "path": "instances/200-10-2ab__Q70.json"
+    },
+    {
+      "instance_id": "200-10-2ab__Q150",
+      "source_sheet": "200-10-2ab",
+      "Q": 150,
+      "depots": 10,
+      "customers": 200,
+      "has_ev_parameters": false,
+      "path": "instances/200-10-2ab__Q150.json"
+    },
+    {
+      "instance_id": "200-10-3ab__Q70",
+      "source_sheet": "200-10-3ab",
+      "Q": 70,
+      "depots": 10,
+      "customers": 200,
+      "has_ev_parameters": false,
+      "path": "instances/200-10-3ab__Q70.json"
+    },
+    {
+      "instance_id": "200-10-3ab__Q150",
+      "source_sheet": "200-10-3ab",
+      "Q": 150,
+      "depots": 10,
+      "customers": 200,
+      "has_ev_parameters": false,
+      "path": "instances/200-10-3ab__Q150.json"
+    },
+    {
+      "instance_id": "G20-5-1a__Q70",
+      "source_sheet": "G20-5-1a",
+      "Q": 70,
+      "depots": 5,
+      "customers": 20,
+      "has_ev_parameters": true,
+      "path": "instances/G20-5-1a__Q70.json"
+    },
+    {
+      "instance_id": "G20-5-1b__Q150",
+      "source_sheet": "G20-5-1b",
+      "Q": 150,
+      "depots": 5,
+      "customers": 20,
+      "has_ev_parameters": true,
+      "path": "instances/G20-5-1b__Q150.json"
+    },
+    {
+      "instance_id": "G50-5-1ab__Q70",
+      "source_sheet": "G50-5-1ab",
+      "Q": 70,
+      "depots": 5,
+      "customers": 50,
+      "has_ev_parameters": true,
+      "path": "instances/G50-5-1ab__Q70.json"
+    },
+    {
+      "instance_id": "G50-5-1ab__Q150",
+      "source_sheet": "G50-5-1ab",
+      "Q": 150,
+      "depots": 5,
+      "customers": 50,
+      "has_ev_parameters": true,
+      "path": "instances/G50-5-1ab__Q150.json"
+    },
+    {
+      "instance_id": "G50-5-2ab__Q70",
+      "source_sheet": "G50-5-2ab",
+      "Q": 70,
+      "depots": 5,
+      "customers": 50,
+      "has_ev_parameters": true,
+      "path": "instances/G50-5-2ab__Q70.json"
+    },
+    {
+      "instance_id": "G50-5-2ab__Q150",
+      "source_sheet": "G50-5-2ab",
+      "Q": 150,
+      "depots": 5,
+      "customers": 50,
+      "has_ev_parameters": true,
+      "path": "instances/G50-5-2ab__Q150.json"
+    },
+    {
+      "instance_id": "G100-5-1ab__Q70",
+      "source_sheet": "G100-5-1ab",
+      "Q": 70,
+      "depots": 5,
+      "customers": 100,
+      "has_ev_parameters": true,
+      "path": "instances/G100-5-1ab__Q70.json"
+    },
+    {
+      "instance_id": "G100-5-1ab__Q150",
+      "source_sheet": "G100-5-1ab",
+      "Q": 150,
+      "depots": 5,
+      "customers": 100,
+      "has_ev_parameters": true,
+      "path": "instances/G100-5-1ab__Q150.json"
+    },
+    {
+      "instance_id": "G100-10-1ab__Q70",
+      "source_sheet": "G100-10-1ab",
+      "Q": 70,
+      "depots": 10,
+      "customers": 100,
+      "has_ev_parameters": true,
+      "path": "instances/G100-10-1ab__Q70.json"
+    },
+    {
+      "instance_id": "G100-10-1ab__Q150",
+      "source_sheet": "G100-10-1ab",
+      "Q": 150,
+      "depots": 10,
+      "customers": 100,
+      "has_ev_parameters": true,
+      "path": "instances/G100-10-1ab__Q150.json"
+    },
+    {
+      "instance_id": "G100-10-3ab__Q70",
+      "source_sheet": "G100-10-3ab",
+      "Q": 70,
+      "depots": 10,
+      "customers": 100,
+      "has_ev_parameters": true,
+      "path": "instances/G100-10-3ab__Q70.json"
+    },
+    {
+      "instance_id": "G100-10-3ab__Q150",
+      "source_sheet": "G100-10-3ab",
+      "Q": 150,
+      "depots": 10,
+      "customers": 100,
+      "has_ev_parameters": true,
+      "path": "instances/G100-10-3ab__Q150.json"
+    },
+    {
+      "instance_id": "G200-10-1ab__Q70",
+      "source_sheet": "G200-10-1ab",
+      "Q": 70,
+      "depots": 10,
+      "customers": 200,
+      "has_ev_parameters": true,
+      "path": "instances/G200-10-1ab__Q70.json"
+    },
+    {
+      "instance_id": "G200-10-1ab__Q150",
+      "source_sheet": "G200-10-1ab",
+      "Q": 150,
+      "depots": 10,
+      "customers": 200,
+      "has_ev_parameters": true,
+      "path": "instances/G200-10-1ab__Q150.json"
+    }
+  ],
+  "distance_unit": null,
+  "notes": [
+    "Capacity alternatives such as 70/150 are separate experimental instances, not a heterogeneous fleet.",
+    "travel_cost = floor(100 * Euclidean distance) for route_cost_type=0; type=1 uses Euclidean distance.",
+    "Coordinate physical unit is unspecified. M4 requires an explicit distance_scale_km and assumption source.",
+    "Raw workbook and all nonempty source cells (including unused columns, labels, formulas, and cached values) are retained.",
+    "No assignment or open-depot configuration has been inferred from coordinates."
+  ]
+}

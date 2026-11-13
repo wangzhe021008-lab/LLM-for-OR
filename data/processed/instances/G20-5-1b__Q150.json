@@ -1,0 +1,386 @@
+{
+  "format_version": "1.0",
+  "instance_id": "G20-5-1b__Q150",
+  "source_sheet": "G20-5-1b",
+  "D": [
+    "d1",
+    "d2",
+    "d3",
+    "d4",
+    "d5"
+  ],
+  "C": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6",
+    "c7",
+    "c8",
+    "c9",
+    "c10",
+    "c11",
+    "c12",
+    "c13",
+    "c14",
+    "c15",
+    "c16",
+    "c17",
+    "c18",
+    "c19",
+    "c20"
+  ],
+  "coordinates": {
+    "d1": {
+      "x": 6,
+      "y": 25
+    },
+    "d2": {
+      "x": 1,
+      "y": 50
+    },
+    "d3": {
+      "x": 11,
+      "y": 25
+    },
+    "d4": {
+      "x": 47,
+      "y": 42
+    },
+    "d5": {
+      "x": 3,
+      "y": 33
+    },
+    "c1": {
+      "x": 22,
+      "y": 35
+    },
+    "c2": {
+      "x": 37,
+      "y": 29
+    },
+    "c3": {
+      "x": 8,
+      "y": 32
+    },
+    "c4": {
+      "x": 40,
+      "y": 14
+    },
+    "c5": {
+      "x": 47,
+      "y": 10
+    },
+    "c6": {
+      "x": 42,
+      "y": 35
+    },
+    "c7": {
+      "x": 5,
+      "y": 14
+    },
+    "c8": {
+      "x": 4,
+      "y": 36
+    },
+    "c9": {
+      "x": 42,
+      "y": 25
+    },
+    "c10": {
+      "x": 29,
+      "y": 13
+    },
+    "c11": {
+      "x": 40,
+      "y": 12
+    },
+    "c12": {
+      "x": 50,
+      "y": 19
+    },
+    "c13": {
+      "x": 49,
+      "y": 12
+    },
+    "c14": {
+      "x": 45,
+      "y": 9
+    },
+    "c15": {
+      "x": 11,
+      "y": 8
+    },
+    "c16": {
+      "x": 25,
+      "y": 5
+    },
+    "c17": {
+      "x": 17,
+      "y": 28
+    },
+    "c18": {
+      "x": 33,
+      "y": 35
+    },
+    "c19": {
+      "x": 2,
+      "y": 41
+    },
+    "c20": {
+      "x": 7,
+      "y": 15
+    }
+  },
+  "q": {
+    "c1": 14,
+    "c2": 17,
+    "c3": 16,
+    "c4": 17,
+    "c5": 17,
+    "c6": 12,
+    "c7": 20,
+    "c8": 15,
+    "c9": 15,
+    "c10": 12,
+    "c11": 13,
+    "c12": 15,
+    "c13": 11,
+    "c14": 18,
+    "c15": 13,
+    "c16": 13,
+    "c17": 19,
+    "c18": 18,
+    "c19": 19,
+    "c20": 14
+  },
+  "U": {
+    "d1": 300,
+    "d2": 300,
+    "d3": 300,
+    "d4": 300,
+    "d5": 300
+  },
+  "F": {
+    "d1": 12286,
+    "d2": 12031,
+    "d3": 6995,
+    "d4": 8502,
+    "d5": 12790
+  },
+  "Q": 150,
+  "h": 1000,
+  "route_cost_type": 0,
+  "ev": {
+    "B": 41.33,
+    "p": 0.72,
+    "r0": 0.32456,
+    "r1": 0.421928
+  },
+  "extra_parameters": {
+    "depot_carbon": {
+      "d1": 30,
+      "d2": 30,
+      "d3": 30,
+      "d4": 30,
+      "d5": 30
+    },
+    "carbon_price": 0.354,
+    "emission_coefficient": 2.63,
+    "diesel_price": 7.51,
+    "diesel_empty_rate": 0.12385,
+    "diesel_full_rate": 0.13641
+  },
+  "coordinate_distance_unit": null,
+  "source_cells": {
+    "U.d1": "D2",
+    "F.d1": "E2",
+    "extra_parameters.depot_carbon.d1": "F2",
+    "coordinates.d1": [
+      "B2",
+      "C2"
+    ],
+    "node_id.d1": "A2",
+    "U.d2": "D3",
+    "F.d2": "E3",
+    "extra_parameters.depot_carbon.d2": "F3",
+    "coordinates.d2": [
+      "B3",
+      "C3"
+    ],
+    "node_id.d2": "A3",
+    "U.d3": "D4",
+    "F.d3": "E4",
+    "extra_parameters.depot_carbon.d3": "F4",
+    "coordinates.d3": [
+      "B4",
+      "C4"
+    ],
+    "node_id.d3": "A4",
+    "U.d4": "D5",
+    "F.d4": "E5",
+    "extra_parameters.depot_carbon.d4": "F5",
+    "coordinates.d4": [
+      "B5",
+      "C5"
+    ],
+    "node_id.d4": "A5",
+    "U.d5": "D6",
+    "F.d5": "E6",
+    "extra_parameters.depot_carbon.d5": "F6",
+    "coordinates.d5": [
+      "B6",
+      "C6"
+    ],
+    "node_id.d5": "A6",
+    "q.c1": "D7",
+    "coordinates.c1": [
+      "B7",
+      "C7"
+    ],
+    "node_id.c1": "A7",
+    "q.c2": "D8",
+    "coordinates.c2": [
+      "B8",
+      "C8"
+    ],
+    "node_id.c2": "A8",
+    "q.c3": "D9",
+    "coordinates.c3": [
+      "B9",
+      "C9"
+    ],
+    "node_id.c3": "A9",
+    "q.c4": "D10",
+    "coordinates.c4": [
+      "B10",
+      "C10"
+    ],
+    "node_id.c4": "A10",
+    "q.c5": "D11",
+    "coordinates.c5": [
+      "B11",
+      "C11"
+    ],
+    "node_id.c5": "A11",
+    "q.c6": "D12",
+    "coordinates.c6": [
+      "B12",
+      "C12"
+    ],
+    "node_id.c6": "A12",
+    "q.c7": "D13",
+    "coordinates.c7": [
+      "B13",
+      "C13"
+    ],
+    "node_id.c7": "A13",
+    "q.c8": "D14",
+    "coordinates.c8": [
+      "B14",
+      "C14"
+    ],
+    "node_id.c8": "A14",
+    "q.c9": "D15",
+    "coordinates.c9": [
+      "B15",
+      "C15"
+    ],
+    "node_id.c9": "A15",
+    "q.c10": "D16",
+    "coordinates.c10": [
+      "B16",
+      "C16"
+    ],
+    "node_id.c10": "A16",
+    "q.c11": "D17",
+    "coordinates.c11": [
+      "B17",
+      "C17"
+    ],
+    "node_id.c11": "A17",
+    "q.c12": "D18",
+    "coordinates.c12": [
+      "B18",
+      "C18"
+    ],
+    "node_id.c12": "A18",
+    "q.c13": "D19",
+    "coordinates.c13": [
+      "B19",
+      "C19"
+    ],
+    "node_id.c13": "A19",
+    "q.c14": "D20",
+    "coordinates.c14": [
+      "B20",
+      "C20"
+    ],
+    "node_id.c14": "A20",
+    "q.c15": "D21",
+    "coordinates.c15": [
+      "B21",
+      "C21"
+    ],
+    "node_id.c15": "A21",
+    "q.c16": "D22",
+    "coordinates.c16": [
+      "B22",
+      "C22"
+    ],
+    "node_id.c16": "A22",
+    "q.c17": "D23",
+    "coordinates.c17": [
+      "B23",
+      "C23"
+    ],
+    "node_id.c17": "A23",
+    "q.c18": "D24",
+    "coordinates.c18": [
+      "B24",
+      "C24"
+    ],
+    "node_id.c18": "A24",
+    "q.c19": "D25",
+    "coordinates.c19": [
+      "B25",
+      "C25"
+    ],
+    "node_id.c19": "A25",
+    "q.c20": "D26",
+    "coordinates.c20": [
+      "B26",
+      "C26"
+    ],
+    "node_id.c20": "A26",
+    "Q": "J8",
+    "h": "J9",
+    "route_cost_type": "J10",
+    "carbon_price": "J15",
+    "emission_coefficient": "J16",
+    "p": "J19",
+    "r0": "J20",
+    "r1": "J21",
+    "B": "J22",
+    "diesel_price": "J28",
+    "diesel_empty_rate": "J29",
+    "diesel_full_rate": "J30"
+  },
+  "original_notes": [
+    {
+      "cell": "K11",
+      "text": "To calculate the matrix distance (or the cost to link any 2 points A and B in the graph), we use the mathematical formula:\n\nsqrt( (xA-xB)² + (yA-yB)² )【欧几何距离公式】\n\nThe results are stored in a float variable (in C language) if the costs are real (code 1)\nThe result is multiplied by 100 and truncked to be stored in an integer variable if the costs are interger (code 0)."
+    }
+  ],
+  "original_vehicle_capacity": 150,
+  "provenance": {
+    "workbook": "Dataset - Prins LRP original instances and adapted instances.xlsx",
+    "workbook_sha256": "fc683bba6ab31294e0ecdefd4b7ee1cdc98a3e966d9b2b14892224496c24e6c3",
+    "sheet": "G20-5-1b",
+    "source_snapshot": "source_sheets/G20-5-1b.json",
+    "capacity_choice": 150,
+    "capacity_source_value": 150,
+    "capacity_source_cell": "J8"
+  }
+}
